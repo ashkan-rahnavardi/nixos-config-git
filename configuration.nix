@@ -84,14 +84,6 @@
       git
     #  thunderbird
     ];
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABAYRneP81
-1YHaUns9fpXdzMAAAAGAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIA5BpX+tXpQ90cyp
-CFmw2loKabdQJJ1I9WBRsGIwXjWpAAAAkNPJi0H8eAcjvVg5+8Yoj0qBxKe7ly2R93bfkk
-yW7FoveWiC3CJHF8U5KYskFQz+e+UgqoCnxPXYmIQGxgG3bNPypwXYn5M2btgLl0RtouI8
-sof24Lo+Y8OvjTAhl5Nbrf8EQ90MmSMsILmJ+lfOSQE42xcNMMS5meIriRhpvKSICSgU4T
-r6kRJBv/2dWg8XGg== ash@nixos"
-    ];
   };
 
   # Install firefox.
