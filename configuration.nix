@@ -109,6 +109,37 @@
 
   # List services that you want to enable:
 
+  # Hyperland shit
+#   services.polkit.enable = true;
+
+#   services.xdg.portal.enable = true;
+#   services.xdg.portal.hyprland.enable = true;
+
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+  };
+
+  hardware = {
+    opengl.enable = true;
+    nvidia.modesetting.enable = true;
+  };
+
+
+  fonts.packages = with pkgs; [
+    dejavu_fonts
+    liberation_ttf
+    noto-fonts
+  ];
+
+#   services.dconf.enable = true;
+
+#   services.xserver.displayManager.gdm.enable = true;
+
+  programs.hyprland.enable = true;
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
@@ -127,18 +158,8 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
-#   # Hyperland
-#   programs.hyprland.enable = true;
-#
-#   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
-#   nix.settings = {
-#     substituters = ["https://hyprland.cachix.org"];
-#     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-#   };
 
 
 }
