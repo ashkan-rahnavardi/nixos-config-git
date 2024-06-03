@@ -9,6 +9,8 @@
   home.username = "ash";
   home.homeDirectory = "/home/ash";
 
+  # Allow unfree packages:
+  nixpkgs.config.allowUnfree = true;
 
   programs.git = {
     enable = true;
@@ -31,10 +33,10 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.hello
+    obsidian
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
