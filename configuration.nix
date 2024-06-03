@@ -109,22 +109,6 @@
 
   # List services that you want to enable:
 
-#   # Hyprland
-#   programs.hyprland = {
-#     enable = true;
-#     xwayland.enable = true;
-#     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-#   };
-#
-#   environment.sessionVariables = {
-#     WLR_NO_HARDWARE_CURSORS = "1";
-#     NICOS_OZONE_WL = "1";
-#   };
-#
-#   hardware = {
-#     opengl.enable = true;
-#     nvidia.modesetting.enable = true;
-#   };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
@@ -142,6 +126,11 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
+
+#   # Hyperland
+#   programs.hyprland.enable = true;
+#
+#   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
