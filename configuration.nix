@@ -35,12 +35,18 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
+
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
+
+  services.xserver.displayManager.setupCommands = ''
+    xrandr --output DP-1 --rate 144
+  '';
 
   # Configure keymap in X11
   services.xserver.xkb = {
