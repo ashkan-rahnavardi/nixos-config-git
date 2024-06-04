@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 let
   myAliases = {
+      rehome = "home-manager switch --flake .";
+      reflake = "sudo nixos-rebuild switch --flake .";
+      hypfin = "hyprctl dispatch exit";
       ll = "ls -l";
       ".." = "cd ..";
     };
