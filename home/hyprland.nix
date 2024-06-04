@@ -23,9 +23,6 @@ in {
     "hypr/hyprpaper.conf".text = ''
       splash = false
       preload = ${wallpaper}
-      wallpaper = DP-1, ${wallpaper}
-      wallpaper = DP-2, ${wallpaper}
-
     '';
 
     "hypr/hypridle.conf".text = ''
