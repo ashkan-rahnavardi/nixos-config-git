@@ -110,35 +110,8 @@
 
   # List services that you want to enable:
 
-  # Hyperland shit
-#   services.polkit.enable = true;
-
-#   services.xdg.portal.enable = true;
-#   services.xdg.portal.hyprland.enable = true;
-
-  environment.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
-  };
-
-  hardware = {
-    opengl.enable = true;
-    nvidia.modesetting.enable = true;
-  };
 
 
-  fonts.packages = with pkgs; [
-    dejavu_fonts
-    liberation_ttf
-    noto-fonts
-  ];
-
-#   services.dconf.enable = true;
-
-#   services.xserver.displayManager.gdm.enable = true;
-
-  programs.hyprland.enable = true;
-
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
 
 
