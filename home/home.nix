@@ -1,5 +1,7 @@
 { config, pkgs, inputs, lib, ... }:
-
+let
+  _ = builtins.trace "home.nix loaded successfully!" "";
+in
 {
   imports = [
     ./sh.nix
@@ -79,8 +81,6 @@
 
   wayland.windowManager.hyprland.enable = true;
 
-   # Debugging output
-  trace "home.nix loaded successfully!";
 
 
 }

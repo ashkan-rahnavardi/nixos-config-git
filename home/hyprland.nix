@@ -1,12 +1,12 @@
 {...}: let
-  wallpaper = ./../../Pictures/walls/rice/neon_car.png;
-  lock = ./../../Pictures/walls/rice/purp_jap.png;
+  wallpaper = builtins.toPath "/home/ash/Pictures/walls/rice/neon_car.png";
+  lock = builtins.toPath "/home/ash/Pictures/walls/rice/purp_jap.png";
   hyprland_config = ./../configs/hypr;
 in {
   imports = [
     ./clipboard.nix
     ./dconf-hyprland.nix
-    ./kanshi.nix
+#     ./kanshi.nix
     ./swappy.nix
     ./swaync.nix
     ./waybar.nix
