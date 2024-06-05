@@ -4,6 +4,7 @@
   imports = [
     ./sh.nix
     ./hyprland.nix
+    ./alacritty.nix
   ];
 
   home.username = "ash";
