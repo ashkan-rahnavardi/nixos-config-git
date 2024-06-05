@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./modules/sh.nix
+#     ./modules/sh.nix
     ./modules/hyprland.nix
     ./modules/alacritty.nix
     ./modules/bat.nix
