@@ -164,6 +164,7 @@
     wl-clipboard
     zoom-us
     kate
+    org.xev
   ];
 
   # Docker configuration
