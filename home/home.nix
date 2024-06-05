@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ./moudles/sh.nix
-    ./moudles/hyprland.nix
-    ./moudles/alacritty.nix
+    ./modules/sh.nix
+    ./modules/hyprland.nix
+    ./modules/alacritty.nix
     ./modules/bat.nix
     ./modules/bottom.nix
     ./modules/fastfetch.nix
