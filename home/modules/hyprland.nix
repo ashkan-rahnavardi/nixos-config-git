@@ -6,7 +6,7 @@ in {
     imports = [
         ./clipboard.nix
         ./dconf-hyprland.nix
-        ./kanshi.nix
+#         ./kanshi.nix
         ./swappy.nix
         ./swaync.nix
         ./waybar.nix
