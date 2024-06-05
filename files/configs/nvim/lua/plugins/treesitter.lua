@@ -33,7 +33,6 @@ return {
       "vim",
       "vimdoc",
       "yaml",
-      "config",
     },
   },
 }

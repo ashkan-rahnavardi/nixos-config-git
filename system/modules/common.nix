@@ -187,17 +187,10 @@
     roboto
   ];
 
-  # wowowoo
   # List services that you want to enable:
   services.locate.enable = true;
   services.locate.localuser = null;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  #  users.users.ash = {
-  #    openssh.authorizedKeys.keys = [
-  #      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA5BpX+tXpQ90cypCFmw2loKabdQJJ1I9WBRsGIwXjWp ash@nixos"
-  #    ];
-  #  };
 }
