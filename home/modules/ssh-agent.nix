@@ -3,18 +3,19 @@
   pkgs,
   ...
 }: {
-  #Enable and configure ssh-agent
-  programs.ssh = {
-    enable = true;
-    startAgent = true;
-    extraConfig = ''
-      AddKeysToAgent yes
-      IdentifyFile /home/ash/.ssh/id_ed25519
-    '';
-  };
+  programs.ssh.startAgent = true;
+  programs.ssh.addKeys = [
+    {
+      path = "/home/ash/.ssh/id_ed25519";
+      askPass = false;
+    }
+  ];
 
-  home.sessionVariables = {
-    GPG_TTY = "${pkgs.stdenv.shell} -c 'tty'";
-    SSH_AUTH_SOCK = "${config.services.ssh-agent.socketPath}";
-  };
+  # You can also specify other ssh options here
+  programs.ssh.extraConfig = ''
+    Host github.com
+      User git
+      IdentityFile "/home/ash/.ssh/id_ed25519"
+      AddKeysToAgent yes
+  '';
 }

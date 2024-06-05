@@ -1,4 +1,4 @@
- {
+{
   inputs,
   lib,
   config,
@@ -54,7 +54,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-
   # X11 settings
   services.xserver = {
     enable = true;
@@ -70,22 +69,21 @@
     desktopManager.plasma5.enable = true;
 
     # Can't seem to get this to work, supposed to set refresh rate of main monitor early
-#     xrandrHeads = [
-#       {
-#         output = "DP-1";
-#         primary = true;
-#         monitorConfig = ''
-#           Option "PreferredMode" "2560x1440_144.00"
-#         '';
-#       }
-#       {
-#         output = "DP-2";
-#         monitorConfig = ''
-#           Option "Rotate" "inverted"
-#         '';
-#       }
-#     ];
-
+    #     xrandrHeads = [
+    #       {
+    #         output = "DP-1";
+    #         primary = true;
+    #         monitorConfig = ''
+    #           Option "PreferredMode" "2560x1440_144.00"
+    #         '';
+    #       }
+    #       {
+    #         output = "DP-2";
+    #         monitorConfig = ''
+    #           Option "Rotate" "inverted"
+    #         '';
+    #       }
+    #     ];
   };
 
   # Set SDDM as the default display manager
@@ -116,7 +114,7 @@
   users.users.ash = {
     isNormalUser = true;
     description = "ash";
-    extraGroups = [ "networkmanager" "wheel" "docker"];
+    extraGroups = ["networkmanager" "wheel" "docker"];
     shell = pkgs.zsh;
   };
 
@@ -193,6 +191,12 @@
   services.locate.enable = true;
   services.locate.localuser = null;
 
-#   # Enable the OpenSSH daemon.
-#   services.openssh.enable = true;
+  # Enable the OpenSSH daemon.
+  services.openssh.enable = true;
+
+  users.users.ash = {
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA5BpX+tXpQ90cypCFmw2loKabdQJJ1I9WBRsGIwXjWp ash@nixos"
+    ];
+  };
 }
