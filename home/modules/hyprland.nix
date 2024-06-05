@@ -238,6 +238,7 @@ in {
             monitor = DP-3, 1920x1080@60.00HZ, -1080x-640, 1, transform, 1
 
             # Execute your favorite apps at launch
+            exec-once = wlr-randr --output eDP-1 --mode 1920x1080@144
             exec-once = hyprpaper
             exec-once = hypridle
             exec-once = gnome-keyring-daemon --start --components=secrets
