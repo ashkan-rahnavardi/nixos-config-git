@@ -1,5 +1,5 @@
 {...}: let
-  waybar_config = ./../configs/waybar;
+  waybar_config = ./../../files/configs/waybar;
 in {
   # Install waybar via home-manager module
   programs.waybar.enable = true;

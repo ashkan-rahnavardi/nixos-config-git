@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  swaync_config = ./../configs/swaync;
+  swaync_config = ./../../files/configs/swaync;
 in {
   # Install swaync via home-manager package
   home.packages = with pkgs; [
