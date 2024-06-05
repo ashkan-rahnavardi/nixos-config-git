@@ -175,6 +175,9 @@
     setSocketVariable = true;
   };
 
+  # Install firefox.
+  programs.firefox.enable = true;
+
   # Zsh configuration
   programs.zsh = {
     enable = true;
