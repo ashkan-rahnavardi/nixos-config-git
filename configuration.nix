@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./ashland.nix
 #       ./hyprland-sys.nix
     ];
 
@@ -36,7 +37,27 @@
   i18n.defaultLocale = "en_CA.UTF-8";
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+
+
+  # Can't seem to get this to work
+#     xrandrHeads = [
+#       {
+#         output = "DP-1";
+#         primary = true;
+#         monitorConfig = ''
+#           Option "PreferredMode" "2560x1440_144.00"
+#         '';
+#       }
+#       {
+#         output = "DP-2";
+#         monitorConfig = ''
+#           Option "Rotate" "inverted"
+#         '';
+#       }
+#     ];
+  };
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
