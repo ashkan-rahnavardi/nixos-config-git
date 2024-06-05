@@ -187,6 +187,7 @@
     roboto
   ];
 
+  # wowowoo
   # List services that you want to enable:
   services.locate.enable = true;
   services.locate.localuser = null;
