@@ -34,13 +34,4 @@ in {
       ];
     };
   };
-
-  # Manage .gtkrc-2.0 with Home Manager
-  home.file.".gtkrc-2.0" = {
-    source = pkgs.writeText "gtkrc-2.0" ''
-      gtk-theme-name="${catppuccin_name}"
-      gtk-icon-theme-name="Tela-circle-dark"
-      gtk-font-name="Roboto 11"
-    '';
-  };
 }
