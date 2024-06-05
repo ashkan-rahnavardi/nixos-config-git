@@ -22,8 +22,12 @@
   };
 
 
-  outputs = { self, nixpkgs, home-manager, spicetify-nix, ...}:
-    let
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+  ...} @ inputs: let
+      inherit (self) outputs;
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -31,13 +35,14 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs; }; # this is the important part
+        specialArgs = { inherit inputs outputs; }; # this is the important part
         modules = [ ./system/configuration.nix ];
       };
     };
     homeConfigurations = {
       ash = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = {inherit inputs outputs;};
         modules = [
           ./home/home.nix
         ];

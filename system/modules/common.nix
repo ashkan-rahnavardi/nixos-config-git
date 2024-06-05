@@ -165,6 +165,7 @@
     wget
     wl-clipboard
     zoom-us
+    kate
   ];
 
   # Docker configuration
@@ -180,7 +181,7 @@
   };
 
   # Fonts configuration
-  fonts.packages = with inputs.nixpkgs-stable.legacyPackages.x86_64-linux; [
+  fonts.packages = with inputs.nixpkgs.legacyPackages.x86_64-linux; [
     (nerdfonts.override {fonts = ["Meslo" "JetBrainsMono"];})
     roboto
   ];
