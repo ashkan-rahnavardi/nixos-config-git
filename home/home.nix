@@ -1,8 +1,11 @@
-{ config, pkgs, inputs, lib, ... }:
-
 {
+  pkgs,
+  inputs,
+  lib,
+  ...
+}: {
   imports = [
-#     ./modules/sh.nix
+    #     ./modules/sh.nix
     ./modules/hyprland.nix
     ./modules/alacritty.nix
     ./modules/bat.nix
@@ -24,7 +27,6 @@
     obsidian
   ];
 
-
   home = {
     username = "ash";
     homeDirectory = "/home/ash";
@@ -35,6 +37,4 @@
   programs.home-manager.enable = true;
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
-
-
 }
