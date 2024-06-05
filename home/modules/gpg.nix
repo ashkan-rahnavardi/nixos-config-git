@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   # Install gpg via home-manager module
   programs.gpg = {
     enable = true;
@@ -31,5 +35,10 @@
     defaultCacheTtl = 86400;
     enableSshSupport = true;
     pinentryPackage = pkgs.pinentry-gnome3;
+  };
+
+  home.sessionVariables = {
+    GPG_TTY = "$tty";
+    SSH_AUTH_SOCK = "${config.xdg.configHome}/gpnupg/s.gpg-agent.ssh";
   };
 }
