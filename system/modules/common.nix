@@ -164,7 +164,8 @@
     wl-clipboard
     zoom-us
     kate
-    xorg.xev
+    xorg.xev # shows key output
+    xorg.xmodmap # shows key mappings
   ];
 
   # Docker configuration
