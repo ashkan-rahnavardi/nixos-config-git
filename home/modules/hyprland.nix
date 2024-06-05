@@ -235,7 +235,7 @@ in {
                   monitor = DP-3, 1920x1080@60.00HZ, -1080x-640, 1, transform, 1
 
                   # Execute your favorite apps at launch
-                  exec-once = bash ~/.dotfiles/files/scripts/hyprland_startup_script.sh
+                  exec-once = bash ./../../files/scripts/hyprland_startup_script.sh
                   exec-once = hyprpaper
                   exec-once = hypridle
                   exec-once = gnome-keyring-daemon --start --components=secrets

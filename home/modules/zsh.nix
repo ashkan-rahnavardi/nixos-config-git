@@ -14,6 +14,10 @@
       gco = "git checkout";
       ggl = "git pull";
       ggp = "git push";
+      
+
+      fix = "wlr-randr --output DP-1 --mode 2560x1440@144"";
+
 
       du = "dust";
       grep = "rg";
