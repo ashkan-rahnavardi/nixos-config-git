@@ -2,9 +2,6 @@
 
     programs.hyprland = {
         enable = true;
-        systemd.extraCommands = [
-            ''wlr-randr --output HDMI-A-1 --mode 1920x1080@144''
-        ];
     };
 
     # Enable security services

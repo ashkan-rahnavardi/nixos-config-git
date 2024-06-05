@@ -16,6 +16,10 @@ in {
     wayland.windowManager.hyprland = {
         enable = true;
 
+        systemd.extraCommands = [
+            ''wlr-randr --output DP-1 --mode 2560x1440144''
+        ];
+
         extraConfig = ''
 
             # Monitors
