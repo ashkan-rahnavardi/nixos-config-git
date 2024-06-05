@@ -2,17 +2,10 @@
 
 {
   imports = [
-    ./sh.nix
-    ./hyprland.nix
-    ./alacritty.nix
+    ./moudles/sh.nix
+    ./moudles/hyprland.nix
+    ./moudles/alacritty.nix
   ];
-
-  home.username = "ash";
-  home.homeDirectory = "/home/ash";
-
-
-  nixpkgs.config.allowUnfree = true;
-
 
   programs.git = {
     enable = true;
@@ -23,19 +16,21 @@
     };
   };
 
-
-  home.stateVersion = "24.05"; # Please read the comment before changing.
-
-
-
   home.packages = with pkgs; [
     obsidian
   ];
 
 
+  home = {
+    username = "ash";
+    homeDirectory = "/home/ash";
+  };
+
+  nixpkgs.config.allowUnfree = true;
 
   programs.home-manager.enable = true;
 
+  home.stateVersion = "24.05"; # Please read the comment before changing.
 
 
 }

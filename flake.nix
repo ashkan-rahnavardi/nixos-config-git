@@ -8,6 +8,10 @@
     nixpkgs.url = "nixpkgs/nixos-24.05";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # NixOS Spicetify
+    spicetify-nix.url = "github:MichaelPachec0/spicetify-nix";
+    spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 #     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 #
 #     hyprland-plugins = {
@@ -18,7 +22,7 @@
   };
 
 
-  outputs = { self, nixpkgs, home-manager, ...}:
+  outputs = { self, nixpkgs, home-manager, spicetify-nix, ...}:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -28,7 +32,7 @@
       nixos = lib.nixosSystem {
         inherit system;
 #         specialArgs = { inherit inputs; }; # this is the important part
-        modules = [ ./configuration.nix ];
+        modules = [ ./system/configuration.nix ];
       };
     };
     homeConfigurations = {
