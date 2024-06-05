@@ -24,11 +24,12 @@ in {
         '';
 
 
-        "hypr/hyprpaper.conf".text = ''
-        splash = false
-        preload = ${wallpaper}
-        wallpaper = DP-1, ${wallpaper}
-        wallpaper = eDP-1, ${wallpaper}
+        "hypr/hypridle.conf".text = ''
+            general {
+                lock_cmd = pidof hyprlock || hyprlock
+                before_sleep_cmd = loginctl lock-session
+                after_sleep_cmd = hyprctl dispatch dpms on
+            }
         '';
 
     };
@@ -196,16 +197,16 @@ in {
             bind = $mainMod, 0, workspace, 10
 
             # Move active window to a workspace with mainMod + SHIFT + [0-9]
-            bind = $mainMod SHIFT, 1, movetoworkspace, 1
-            bind = $mainMod SHIFT, 2, movetoworkspace, 2
-            bind = $mainMod SHIFT, 3, movetoworkspace, 3
-            bind = $mainMod SHIFT, 4, movetoworkspace, 4
-            bind = $mainMod SHIFT, 5, movetoworkspace, 5
-            bind = $mainMod SHIFT, 6, movetoworkspace, 6
-            bind = $mainMod SHIFT, 7, movetoworkspace, 7
-            bind = $mainMod SHIFT, 8, movetoworkspace, 8
-            bind = $mainMod SHIFT, 9, movetoworkspace, 9
-            bind = $mainMod SHIFT, 0, movetoworkspace, 10
+            bind = $mainMod SHIFT, down, movetoworkspace, 1
+            bind = $mainMod SHIFT, up, movetoworkspace, 2
+            bind = $mainMod SHIFT, left, movetoworkspace, 3
+#             bind = $mainMod SHIFT, 4, movetoworkspace, 4
+#             bind = $mainMod SHIFT, 5, movetoworkspace, 5
+#             bind = $mainMod SHIFT, 6, movetoworkspace, 6
+#             bind = $mainMod SHIFT, 7, movetoworkspace, 7
+#             bind = $mainMod SHIFT, 8, movetoworkspace, 8
+#             bind = $mainMod SHIFT, 9, movetoworkspace, 9
+#             bind = $mainMod SHIFT, 0, movetoworkspace, 10
 
             # Scroll through existing workspaces with mainMod + scroll
             bind = $mainMod, mouse_down, workspace, e+1
