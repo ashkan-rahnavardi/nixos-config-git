@@ -3,6 +3,17 @@
   lock = builtins.toPath "/home/ash/Pictures/walls/rice/purp_jap.png";
 in {
 
+    imports = [
+        ./clipboard.nix
+        ./dconf-hyprland.nix
+    #     ./kanshi.nix
+        ./swappy.nix
+        ./swaync.nix
+        ./waybar.nix
+        ./wofi.nix
+    #     ./xdg.nix
+    ];
+
     xdg.configFile = {
         "hypr/hyprpaper.conf".text = ''
             splash = false
@@ -11,6 +22,15 @@ in {
             wallpaper = DP-2, ${wallpaper}
             wallpaper = DP-3, ${wallpaper}
         '';
+
+
+        "hypr/hyprpaper.conf".text = ''
+        splash = false
+        preload = ${wallpaper}
+        wallpaper = DP-1, ${wallpaper}
+        wallpaper = eDP-1, ${wallpaper}
+        '';
+
     };
 
     wayland.windowManager.hyprland = {
@@ -28,8 +48,16 @@ in {
             monitor = DP-3, 1920x1080@60.00HZ, -1080x-640, 1, transform, 1
 
             # Execute your favorite apps at launch
-            # exec-once = waybar
             exec-once = hyprpaper
+            exec-once = hypridle
+            exec-once = gnome-keyring-daemon --start --components=secrets
+            exec-once = kanshi
+            exec-once = nm-applet —-indicator
+            exec-once = swaync
+            exec-once = ulauncher --hide-window
+            exec-once = waybar
+            exec-once = wl-paste --watch cliphist store
+            exec-once = wlsunset -l 52.23 -L 21.01
 
             # Source a file (multi-file configs)
             # source = ~/.config/hypr/myColors.conf
@@ -137,6 +165,7 @@ in {
             # bind = $mainMod, Q, exec, kitty
             bind = $mainMod, RETURN, exec, alacritty
             # bind = $mainMod, C, killactive,
+            bind = $mainMod SHIFT, B, exec, brave
             bind = $mainMod, Q, killactive,
             bind = $mainMod, M, exit,
             bind = $mainMod, E, exec, dolphin
@@ -185,6 +214,43 @@ in {
             # Move/resize windows with mainMod + LMB/RMB and dragging
             bindm = $mainMod, mouse:272, movewindow
             bindm = $mainMod, mouse:273, resizewindow
+
+            # Application menu
+            bind = $mainMod, Space, exec, wofi --show drun --allow-images
+
+            # Center focused window
+            bind = CTRL ALT, C, centerwindow
+
+            # Clipboard
+            bind = ALT SHIFT, V, exec, cliphist list | wofi --show dmenu | cliphist decode | wl-copy
+
+            # Screenshot area
+            bind = $mainMod SHIFT, S, exec, grim -g "$(slurp)" - | swappy -f -
+
+            # Screenshot entire screen
+            bind = $mainMod CTRL, S, exec, grim - | swappy -f -
+
+            # Screen recording
+            bind = $mainMod SHIFT, R, exec, $HOME/.local/bin/screen-recorder
+
+            # OCR
+            bind = ALT SHIFT, 2, exec, grim -t png -g "$(slurp)" - | tesseract stdin stdout -l "eng+rus+pol" | tr -d '\f' | wl-copy
+
+            # Lock screen
+            bind = $mainMod SHIFT, L, exec, hyprlock
+
+            # Adjust brightness
+            bind = , XF86MonBrightnessUp, exec, brightnessctl set +10%
+            bind = , XF86MonBrightnessDown, exec, brightnessctl set 10%-
+
+            # Open notifications
+            bind = $mainMod, V, exec, swaync-client -t -sw
+
+            # Adjust  volume
+            bind = , XF86AudioRaiseVolume, exec, pamixer -i 10
+            bind = , XF86AudioLowerVolume, exec, pamixer -d 10
+            bind = , XF86AudioMute, exec, pamixer -t
+            bind = , XF86AudioMicMute, exec, pamixer --default-source --toggle-mute
 
             '';
   };
