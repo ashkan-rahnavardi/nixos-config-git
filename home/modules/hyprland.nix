@@ -428,15 +428,8 @@ in {
                   bind = $mainMod SHIFT, L, exec, hyprlock
 
                   # Adjust brightness
-                #  bind = , XF86MonBrightnessUp, exec, brightnessctl set +10%
-                #  bind = , XF86MonBrightnessDown, exec, brightnessctl set 10%-
-
-                  # Adjust brightness
-                  bind = ALT SHIFT , Y, exec, brightnessctl set +10%
-                  bind = ALT SHIFT, H, exec, brightnessctl set 10%-
-
-
-
+                  bind = , XF86MonBrightnessUp, exec, brightnessctl set +10%
+                  bind = , XF86MonBrightnessDown, exec, brightnessctl set 10%-
 
                   # Open notifications
                   bind = $mainMod, V, exec, swaync-client -t -sw
