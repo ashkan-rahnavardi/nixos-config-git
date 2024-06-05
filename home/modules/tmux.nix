@@ -30,9 +30,9 @@
       }
     ];
     extraConfig = ''
-      # Set the prefix to `ctrl + q` instead of `ctrl + b`
-      set -g prefix C-q
-      unbind C-b
+      # Set the prefix to `ctrl + b` (default)
+      set -g prefix C-b
+      unbind C-q
 
       # Use | and - to split a window vertically and horizontally instead of " and % respoectively
       unbind '"'
