@@ -5,7 +5,7 @@
 }: {
   imports = [
     #     ./modules/sh.nix
-    ./modules/ssh-agent.nix
+    # ./modules/ssh-agent.nix
     ./modules/hyprland.nix
     ./modules/alacritty.nix
     ./modules/bat.nix
