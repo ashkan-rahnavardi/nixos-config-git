@@ -245,7 +245,7 @@ in {
                   exec-once = ulauncher --hide-window
                   exec-once = waybar
                   exec-once = wl-paste --watch cliphist store
-                  exec-once = wlsunset -l 52.23 -L 21.01
+               #  exec-once = wlsunset -l 52.23 -L 21.01
 
                   # Source a file (multi-file configs)
                   # source = ~/.config/hypr/myColors.conf
