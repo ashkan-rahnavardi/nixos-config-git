@@ -72,7 +72,7 @@
     tesseract
     wf-recorder
     wlr-randr
-    wlsunset
+    #  wlsunset
   ];
 
   # Stylix stuff
