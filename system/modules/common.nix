@@ -36,7 +36,7 @@
 
   # Boot settings
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_6_8;
     kernelParams = ["nvidia-drm.modeset=1" "quiet" "splash"];
     consoleLogLevel = 0;
     initrd.verbose = false;
