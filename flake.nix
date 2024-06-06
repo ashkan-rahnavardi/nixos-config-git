@@ -1,8 +1,5 @@
 {
-
-
   description = "My first flake!";
-
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.05";
@@ -12,31 +9,30 @@
     # NixOS Spicetify
     spicetify-nix.url = "github:MichaelPachec0/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
-#     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-#
-#     hyprland-plugins = {
-#       url = "github:hyprwm/hyprland-plugins";
-#       inputs.hyprland.follows = "hyprland";
-#     };
 
+    # Themeing type tings
+    stylix.url = "github:danth/stylix";
   };
-
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-  ...} @ inputs: let
-      inherit (self) outputs;
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs outputs; }; # this is the important part
-        modules = [ ./system/configuration.nix ];
+        specialArgs = {inherit inputs outputs;}; # this is the important part
+        modules = [
+          ./system/configuration.nix
+          inputs.stylix.nixisModules.stylix
+        ];
       };
     };
     homeConfigurations = {
@@ -49,7 +45,4 @@
       };
     };
   };
-
 }
-
-
