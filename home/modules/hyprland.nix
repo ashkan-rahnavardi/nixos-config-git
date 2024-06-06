@@ -1,6 +1,9 @@
 {...}: let
   wallpaper = builtins.toPath "/home/ash/Pictures/walls/rice/neon_car.png";
-  lock = builtins.toPath "/home/ash/Pictures/walls/rice/purp_jap.png";
+  wallpaper2 = builtins.toPath "/home/ash/Pictures/walls/rice/purp_jap.png";
+  wallpaper3 = builtins.toPath "/home/ash/Pictures/walls/rice/road-moon_vert.png";
+  lock = builtins.toPath "/home/ash/Pictures/walls/rice/feet_on_dash.png";
+  hyprland_config = ./../../files/configs/hypr;
 in {
   imports = [
     ./clipboard.nix
@@ -14,12 +17,17 @@ in {
   ];
 
   xdg.configFile = {
+    "hypr" = {
+      recursive = true;
+      source = "${hyprland_config}";
+    };
+
     "hypr/hyprpaper.conf".text = ''
       splash = false
       preload = ${wallpaper}
       wallpaper = DP-1, ${wallpaper}
-      wallpaper = DP-2, ${wallpaper}
-      wallpaper = DP-3, ${wallpaper}
+      wallpaper = DP-2, ${wallpaper2}
+      wallpaper = DP-3, ${wallpaper3}
     '';
 
     "hypr/hypridle.conf".text = ''
