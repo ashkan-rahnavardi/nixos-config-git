@@ -67,23 +67,6 @@
 
     # Enable KDE Plasma 5 Desktop Environment
     desktopManager.plasma5.enable = true;
-
-    # Can't seem to get this to work, supposed to set refresh rate of main monitor early
-    #     xrandrHeads = [
-    #       {
-    #         output = "DP-1";
-    #         primary = true;
-    #         monitorConfig = ''
-    #           Option "PreferredMode" "2560x1440_144.00"
-    #         '';
-    #       }
-    #       {
-    #         output = "DP-2";
-    #         monitorConfig = ''
-    #           Option "Rotate" "inverted"
-    #         '';
-    #       }
-    #     ];
   };
 
   # Set SDDM as the default display manager
