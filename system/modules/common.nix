@@ -37,9 +37,9 @@
   # Boot settings
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = ["nvidia-drm.modeset=1" "quiet" "splash"];
     consoleLogLevel = 0;
     initrd.verbose = false;
-    kernelParams = ["quiet" "splash"];
     loader.efi.canTouchEfiVariables = true;
     loader.systemd-boot.enable = true;
     plymouth.enable = true;
@@ -99,8 +99,19 @@
     desktopManager.plasma5.enable = true;
   };
 
+  sevices.xserver.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    settings = {
+      wayland = {
+        enableHidpiSupport = true;
+        enableVsync = true;
+      };
+    };
+  };
+
   # Set SDDM as the default display manager
-  services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.enable = true;
 
   # Add ~/.local/bin to PATH
   environment.localBinInPath = true;
