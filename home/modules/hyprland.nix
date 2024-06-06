@@ -26,8 +26,8 @@ in {
       splash = false
       preload = ${wallpaper}
       wallpaper = DP-1, ${wallpaper}
-      wallpaper = DP-2, ${wallpaper2}
-      wallpaper = DP-3, ${wallpaper3}
+      wallpaper = DP-2, ${wallpaper}
+      wallpaper = DP-3, ${wallpaper}
     '';
 
     "hypr/hypridle.conf".text = ''
