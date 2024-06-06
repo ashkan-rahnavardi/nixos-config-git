@@ -31,194 +31,194 @@ in {
       }
     '';
 
-    # "hypr/hyprlock.conf".text = ''
-    #   background {
-    #       monitor =
-    #       path = ${lock}
-    #       blur_passes = 3
-    #       contrast = 0.8916
-    #       brightness = 0.8172
-    #       vibrancy = 0.1696
-    #       vibrancy_darkness = 0.0
-    #   }
-    #
-    #   general {
-    #       no_fade_in = false
-    #       grace = 0
-    #       disable_loading_bar = true
-    #   }
-    #
-    #   # DP-1 Conifg
-    #   input-field {
-    #       monitor = DP-1
-    #       size = 250, 60
-    #       outline_thickness = 2
-    #       dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
-    #       dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
-    #       dots_center = true
-    #       outer_color = rgba(0, 0, 0, 0)
-    #       inner_color = rgba(0, 0, 0, 0.5)
-    #       font_color = rgb(200, 200, 200)
-    #       fade_on_empty = false
-    #       capslock_color = -1
-    #       placeholder_text = <i><span foreground="##e6e9ef">Password</span></i>
-    #       fail_text = <i>$FAIL <b>($ATTEMPTS)</b></i>
-    #       hide_input = false
-    #       position = 0, -120
-    #       halign = center
-    #       valign = center
-    #   }
-    #
-    #   # Date
-    #   label {
-    #       monitor = DP-1
-    #       text = cmd[update:1000] echo "<span>$(date '+%A, %d %B')</span>"
-    #       color = rgba(255, 255, 255, 0.8)
-    #       font_size = 15
-    #       font_family = JetBrains Mono Nerd Font Mono ExtraBold
-    #       position = 0, -400
-    #       halign = center
-    #       valign = top
-    #   }
-    #
-    #   # Time
-    #   label {
-    #       monitor = DP-1
-    #       text = cmd[update:1000] echo "<span>$(date '+%H:%M')</span>"
-    #       color = rgba(255, 255, 255, 0.8)
-    #       font_size = 120
-    #       font_family = JetBrains Mono Nerd Font Mono ExtraBold
-    #       position = 0, -400
-    #       halign = center
-    #       valign = top
-    #   }
-    #
-    #   # Keyboard layout
-    #   label {
-    #       monitor = DP-1
-    #       text = $LAYOUT
-    #       color = rgba(255, 255, 255, 0.9)
-    #       font_size = 10
-    #       font_family = JetBrains Mono Nerd Font Mono
-    #       position = 0, -175
-    #       halign = center
-    #       valign = center
-    #   }
-    #
-    #   # DP-2 Conifg
-    #   input-field {
-    #       monitor = DP-2
-    #       size = 250, 60
-    #       outline_thickness = 2
-    #       dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
-    #       dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
-    #       dots_center = true
-    #       outer_color = rgba(0, 0, 0, 0)
-    #       inner_color = rgba(0, 0, 0, 0.5)
-    #       font_color = rgb(200, 200, 200)
-    #       fade_on_empty = false
-    #       capslock_color = -1
-    #       placeholder_text = <i><span foreground="##e6e9ef">Password</span></i>
-    #       fail_text = <i>$FAIL <b>($ATTEMPTS)</b></i>
-    #       hide_input = false
-    #       position = 0, -120
-    #       halign = center
-    #       valign = center
-    #   }
-    #
-    #   # Date
-    #   label {
-    #       monitor = DP-2
-    #       text = cmd[update:1000] echo "<span>$(date '+%A, %d %B')</span>"
-    #       color = rgba(255, 255, 255, 0.8)
-    #       font_size = 15
-    #       font_family = JetBrains Mono Nerd Font Mono ExtraBold
-    #       position = 0, -400
-    #       halign = center
-    #       valign = top
-    #   }
-    #
-    #   # Time
-    #   label {
-    #       monitor = DP-2
-    #       text = cmd[update:1000] echo "<span>$(date '+%H:%M')</span>"
-    #       color = rgba(255, 255, 255, 0.8)
-    #       font_size = 120
-    #       font_family = JetBrains Mono Nerd Font Mono ExtraBold
-    #       position = 0, -400
-    #       halign = center
-    #       valign = top
-    #   }
-    #
-    #   # Keyboard layout
-    #   label {
-    #       monitor = DP-2
-    #       text = $LAYOUT
-    #       color = rgba(255, 255, 255, 0.9)
-    #       font_size = 10
-    #       font_family = JetBrains Mono Nerd Font Mono
-    #       position = 0, -175
-    #       halign = center
-    #       valign = center
-    #   }
-    #
-    #   # DP-3 Conifg
-    #   input-field {
-    #       monitor = DP-3
-    #       size = 250, 60
-    #       outline_thickness = 2
-    #       dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
-    #       dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
-    #       dots_center = true
-    #       outer_color = rgba(0, 0, 0, 0)
-    #       inner_color = rgba(0, 0, 0, 0.5)
-    #       font_color = rgb(200, 200, 200)
-    #       fade_on_empty = false
-    #       capslock_color = -1
-    #       placeholder_text = <i><span foreground="##e6e9ef">Password</span></i>
-    #       fail_text = <i>$FAIL <b>($ATTEMPTS)</b></i>
-    #       hide_input = false
-    #       position = 0, -120
-    #       halign = center
-    #       valign = center
-    #   }
-    #
-    #   # Date
-    #   label {
-    #       monitor = DP-3
-    #       text = cmd[update:1000] echo "<span>$(date '+%A, %d %B')</span>"
-    #       color = rgba(255, 255, 255, 0.8)
-    #       font_size = 15
-    #       font_family = JetBrains Mono Nerd Font Mono ExtraBold
-    #       position = 0, -400
-    #       halign = center
-    #       valign = top
-    #   }
-    #
-    #   # Time
-    #   label {
-    #       monitor = DP-3
-    #       text = cmd[update:1000] echo "<span>$(date '+%H:%M')</span>"
-    #       color = rgba(255, 255, 255, 0.8)
-    #       font_size = 120
-    #       font_family = JetBrains Mono Nerd Font Mono ExtraBold
-    #       position = 0, -400
-    #       halign = center
-    #       valign = top
-    #   }
-    #
-    #   # Keyboard layout
-    #   label {
-    #       monitor = DP-3
-    #       text = $LAYOUT
-    #       color = rgba(255, 255, 255, 0.9)
-    #       font_size = 10
-    #       font_family = JetBrains Mono Nerd Font Mono
-    #       position = 0, -175
-    #       halign = center
-    #       valign = center
-    #   }
-    # '';
+    "hypr/hyprlock.conf".text = ''
+      background {
+          monitor =
+          path = ${lock}
+          blur_passes = 3
+          contrast = 0.8916
+          brightness = 0.8172
+          vibrancy = 0.1696
+          vibrancy_darkness = 0.0
+      }
+
+      general {
+          no_fade_in = false
+          grace = 0
+          disable_loading_bar = true
+      }
+
+      # dp-1 conifg
+      input-field {
+          monitor = dp-1
+          size = 250, 60
+          outline_thickness = 2
+          dots_size = 0.2 # scale of input-field height, 0.2 - 0.8
+          dots_spacing = 0.2 # scale of dots' absolute size, 0.0 - 1.0
+          dots_center = true
+          outer_color = rgba(0, 0, 0, 0)
+          inner_color = rgba(0, 0, 0, 0.5)
+          font_color = rgb(200, 200, 200)
+          fade_on_empty = false
+          capslock_color = -1
+          placeholder_text = <i><span foreground="##e6e9ef">password</span></i>
+          fail_text = <i>$fail <b>($attempts)</b></i>
+          hide_input = false
+          position = 0, -120
+          halign = center
+          valign = center
+      }
+
+      # date
+      label {
+          monitor = dp-1
+          text = cmd[update:1000] echo "<span>$(date '+%a, %d %b')</span>"
+          color = rgba(255, 255, 255, 0.8)
+          font_size = 15
+          font_family = jetbrains mono nerd font mono extrabold
+          position = 0, -400
+          halign = center
+          valign = top
+      }
+
+      # time
+      label {
+          monitor = dp-1
+          text = cmd[update:1000] echo "<span>$(date '+%h:%m')</span>"
+          color = rgba(255, 255, 255, 0.8)
+          font_size = 120
+          font_family = jetbrains mono nerd font mono extrabold
+          position = 0, -400
+          halign = center
+          valign = top
+      }
+
+      # keyboard layout
+      label {
+          monitor = dp-1
+          text = $layout
+          color = rgba(255, 255, 255, 0.9)
+          font_size = 10
+          font_family = jetbrains mono nerd font mono
+          position = 0, -175
+          halign = center
+          valign = center
+      }
+
+      # dp-2 conifg
+      input-field {
+          monitor = dp-2
+          size = 250, 60
+          outline_thickness = 2
+          dots_size = 0.2 # scale of input-field height, 0.2 - 0.8
+          dots_spacing = 0.2 # scale of dots' absolute size, 0.0 - 1.0
+          dots_center = true
+          outer_color = rgba(0, 0, 0, 0)
+          inner_color = rgba(0, 0, 0, 0.5)
+          font_color = rgb(200, 200, 200)
+          fade_on_empty = false
+          capslock_color = -1
+          placeholder_text = <i><span foreground="##e6e9ef">password</span></i>
+          fail_text = <i>$fail <b>($attempts)</b></i>
+          hide_input = false
+          position = 0, -120
+          halign = center
+          valign = center
+      }
+
+      # date
+      label {
+          monitor = dp-2
+          text = cmd[update:1000] echo "<span>$(date '+%a, %d %b')</span>"
+          color = rgba(255, 255, 255, 0.8)
+          font_size = 15
+          font_family = jetbrains mono nerd font mono extrabold
+          position = 0, -400
+          halign = center
+          valign = top
+      }
+
+      # time
+      label {
+          monitor = dp-2
+          text = cmd[update:1000] echo "<span>$(date '+%h:%m')</span>"
+          color = rgba(255, 255, 255, 0.8)
+          font_size = 120
+          font_family = jetbrains mono nerd font mono extrabold
+          position = 0, -400
+          halign = center
+          valign = top
+      }
+
+      # keyboard layout
+      label {
+          monitor = dp-2
+          text = $layout
+          color = rgba(255, 255, 255, 0.9)
+          font_size = 10
+          font_family = jetbrains mono nerd font mono
+          position = 0, -175
+          halign = center
+          valign = center
+      }
+
+      # dp-3 conifg
+      input-field {
+          monitor = dp-3
+          size = 250, 60
+          outline_thickness = 2
+          dots_size = 0.2 # scale of input-field height, 0.2 - 0.8
+          dots_spacing = 0.2 # scale of dots' absolute size, 0.0 - 1.0
+          dots_center = true
+          outer_color = rgba(0, 0, 0, 0)
+          inner_color = rgba(0, 0, 0, 0.5)
+          font_color = rgb(200, 200, 200)
+          fade_on_empty = false
+          capslock_color = -1
+          placeholder_text = <i><span foreground="##e6e9ef">password</span></i>
+          fail_text = <i>$fail <b>($attempts)</b></i>
+          hide_input = false
+          position = 0, -120
+          halign = center
+          valign = center
+      }
+
+      # date
+      label {
+          monitor = dp-3
+          text = cmd[update:1000] echo "<span>$(date '+%a, %d %b')</span>"
+          color = rgba(255, 255, 255, 0.8)
+          font_size = 15
+          font_family = jetbrains mono nerd font mono extrabold
+          position = 0, -400
+          halign = center
+          valign = top
+      }
+
+      # time
+      label {
+          monitor = dp-3
+          text = cmd[update:1000] echo "<span>$(date '+%h:%m')</span>"
+          color = rgba(255, 255, 255, 0.8)
+          font_size = 120
+          font_family = jetbrains mono nerd font mono extrabold
+          position = 0, -400
+          halign = center
+          valign = top
+      }
+
+      # keyboard layout
+      label {
+          monitor = dp-3
+          text = $layout
+          color = rgba(255, 255, 255, 0.9)
+          font_size = 10
+          font_family = jetbrains mono nerd font mono
+          position = 0, -175
+          halign = center
+          valign = center
+      }
+    '';
   };
 
   wayland.windowManager.hyprland = {
