@@ -168,6 +168,8 @@
     xorg.xmodmap # shows key mappings
     imagemagick
     file
+    btop
+    htop
   ];
 
   # Docker configuration
