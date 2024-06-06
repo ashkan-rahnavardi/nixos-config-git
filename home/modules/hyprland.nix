@@ -14,6 +14,7 @@ in {
     ./waybar.nix
     ./wofi.nix
     ./xdg.nix
+    ./hyprpaper.nix
   ];
 
   xdg.configFile = {
@@ -22,16 +23,16 @@ in {
       source = "${hyprland_config}";
     };
 
-    "hypr/hyprpaper.conf".text = ''
-      ipc = on
-      splash = false
-      preload = [
-        ${wallpaper} ${wallpaper2} ${wallpaper3}
-      ];
-      wallpaper = [
-        ${wallpaper} ${wallpaper2} ${wallpaper3}
-      ]
-    '';
+    #    "hypr/hyprpaper.conf".text = ''
+    #      ipc = on
+    #      splash = false
+    #      preload = [
+    #        ${wallpaper} ${wallpaper2} ${wallpaper3}
+    #      ];
+    #      wallpaper = [
+    #        ${wallpaper} ${wallpaper2} ${wallpaper3}
+    #      ]
+    #    '';
 
     "hypr/hypridle.conf".text = ''
       general {
