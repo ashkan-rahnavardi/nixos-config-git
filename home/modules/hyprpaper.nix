@@ -7,7 +7,6 @@ in {
     enable = true;
 
     settings = {
-      ipc = "on";
       splash = false;
 
       preload = [
