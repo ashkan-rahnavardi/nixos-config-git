@@ -107,7 +107,7 @@ in {
 
       # dp-2 conifg
       input-field {
-          monitor = dp-2
+          monitor = dp-4
           size = 250, 60
           outline_thickness = 2
           dots_size = 0.2 # scale of input-field height, 0.2 - 0.8
@@ -128,7 +128,7 @@ in {
 
       # date
       label {
-          monitor = dp-2
+          monitor = dp-4
           text = cmd[update:1000] echo "<span>$(date '+%a, %d %b')</span>"
           color = rgba(255, 255, 255, 0.8)
           font_size = 15
@@ -140,7 +140,7 @@ in {
 
       # time
       label {
-          monitor = dp-2
+          monitor = dp-4
           text = cmd[update:1000] echo "<span>$(date '+%h:%m')</span>"
           color = rgba(255, 255, 255, 0.8)
           font_size = 120
@@ -152,7 +152,7 @@ in {
 
       # keyboard layout
       label {
-          monitor = dp-2
+          monitor = dp-4
           text = $layout
           color = rgba(255, 255, 255, 0.9)
           font_size = 10
