@@ -80,6 +80,7 @@
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
+      size = lib.mkDefault 32;
     };
 
     fonts = {
