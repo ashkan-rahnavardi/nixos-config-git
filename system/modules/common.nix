@@ -167,6 +167,7 @@
     xorg.xev # shows key output
     xorg.xmodmap # shows key mappings
     imagemagick
+    file
   ];
 
   # Docker configuration
