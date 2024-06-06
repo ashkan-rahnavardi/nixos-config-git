@@ -1,13 +1,25 @@
-{ config, pkgs, lib, inputs, ... }: {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./modules/common.nix
-      ./modules/hyprland.nix
-    ];
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    ./modules/common.nix
+    ./modules/hyprland.nix
+  ];
 
   # Set hostname
   networking.hostName = "nixos"; # Define your hostname.
+
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 4076;
+    }
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
