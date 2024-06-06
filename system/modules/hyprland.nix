@@ -20,7 +20,7 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-    nvidiaPatches = true;
+    #  nvidiaPatches = true;
     portalPackage =
       pkgs.xdg-desktop-portal-wlr
       // {
