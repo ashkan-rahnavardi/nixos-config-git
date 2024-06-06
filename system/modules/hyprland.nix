@@ -58,7 +58,11 @@
     gnome.totem # Video player
     loupe # image viewer
 
-    #  brightnessctl
+    # Qt Wayland Support
+    qt6.qtwayland
+    qt5.qtwayland
+
+    brightnessctl
     grim
     hypridle
     hyprlock
