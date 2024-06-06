@@ -37,7 +37,7 @@ return {
         "             ██║  ██║███████║██║  ██║ ╚████╔╝ ██║██║ ╚═╝ ██║            ",
         "             ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝            ",
       }, "\n")
-      logo = string.rep("\n", 2) .. logo .. "\n\n"
+      logo = string.rep("\n", 1) .. logo .. "\n"
       dashboard.config.header = vim.split(logo, "\n")
     end,
   },
