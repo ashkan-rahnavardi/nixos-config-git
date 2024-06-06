@@ -99,7 +99,7 @@
     desktopManager.plasma5.enable = true;
   };
 
-  sevices.xserver.displayManager.sddm = {
+  services.xserver.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
     settings = {
