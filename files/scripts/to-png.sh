@@ -14,6 +14,9 @@ if ! command -v magick &>/dev/null; then
 	exit 1
 fi
 
+# Initialize a counter variable
+counter=0
+
 # Convert all images to PNG
 for file in "$DIR"/*; do
 	if [[ -f "$file" ]]; then
@@ -25,8 +28,15 @@ for file in "$DIR"/*; do
 		# Convert the file to PNG format
 		magick convert "$file" "$DIR/$filename.png"
 
-		# Optionally, remove the original file if you want to replace it
-		# rm "$file"
+		# Alternate between two emojis
+		if ((counter % 2 == 0)); then
+			echo "PooPoo 💩"
+		else
+			echo "PeePee 🚽 𓂺   "
+		fi
+
+		# Increment the counter
+		((counter++))
 	fi
 done
 
