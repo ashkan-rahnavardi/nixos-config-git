@@ -6,8 +6,8 @@
       shell.program = "zsh";
       shell.args = [
         "-l"
-        "-c"
-        "tmux attach || tmux "
+        #     "-c"
+        #     "tmux attach || tmux "
       ];
 
       env = {
@@ -23,9 +23,10 @@
           lines = 45;
         };
         padding = {
-          x = 5;
-          y = 1;
+          x = 15;
+          y = 15;
         };
+        opacity = 0.7;
       };
 
       scrolling = {
@@ -36,22 +37,42 @@
       font = {
         size = 12;
         normal = {
-          family = "MesloLGS Nerd Font";
+          family = "JetBrainsMono";
           style = "Regular";
         };
         bold = {
-          family = "MesloLGS Nerd Font";
+          family = "JetBrainsMono";
           style = "Bold";
         };
         italic = {
-          family = "MesloLGS Nerd Font";
+          family = "JetBrainsMono";
           style = "Italic";
         };
         bold_italic = {
-          family = "MesloLGS Nerd Font";
+          family = "JetBrainsMono";
           style = "Italic";
         };
       };
+
+      #      font = {
+      #        size = 12;
+      #        normal = {
+      #          family = "MesloLGS Nerd Font";
+      #          style = "Regular";
+      #        };
+      #        bold = {
+      #          family = "MesloLGS Nerd Font";
+      #          style = "Bold";
+      #        };
+      #        italic = {
+      #          family = "MesloLGS Nerd Font";
+      #          style = "Italic";
+      #        };
+      #        bold_italic = {
+      #          family = "MesloLGS Nerd Font";
+      #          style = "Italic";
+      #        };
+      #      };
 
       import = [
         (pkgs.fetchurl {
