@@ -16,9 +16,9 @@ in {
       ];
 
       wallpaper = [
-        "DP-1,${wallpaper}"
-        "DP-2,${wallpaper2}"
-        "DP-3,${wallpaper3}"
+        "DP-4,${wallpaper}"
+        "DP-3,${wallpaper2}"
+        "DP-1,${wallpaper3}"
       ];
 
       #     preload = [
