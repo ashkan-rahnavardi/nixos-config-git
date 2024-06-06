@@ -23,17 +23,6 @@ in {
       source = "${hyprland_config}";
     };
 
-    #    "hypr/hyprpaper.conf".text = ''
-    #      ipc = on
-    #      splash = false
-    #      preload = [
-    #        ${wallpaper} ${wallpaper2} ${wallpaper3}
-    #      ];
-    #      wallpaper = [
-    #        ${wallpaper} ${wallpaper2} ${wallpaper3}
-    #      ]
-    #    '';
-
     "hypr/hypridle.conf".text = ''
       general {
           lock_cmd = pidof hyprlock || hyprlock

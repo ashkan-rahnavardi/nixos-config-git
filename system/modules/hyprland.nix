@@ -37,8 +37,8 @@
   # Enable Ozone Wayland support in Chromium and Electron based applications
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    # XCURSOR_SIZE = "24";
-    # XCURSOR_THEME = "Yaru";
+    XCURSOR_SIZE = "24";
+    XCURSOR_THEME = "Yaru";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
   };
@@ -74,27 +74,27 @@
   ];
 
   # Stylix stuff
-  stylix = {
-    image = /home/ash/Pictures/walls/rice/neon_car.png;
-
-    cursor = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
-    };
-
-    fonts = {
-      monospace = {
-        package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-        name = "JetBrainsMono Nerd Font Mono";
-      };
-      sansSerif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Sans";
-      };
-      serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
-      };
-    };
-  };
+  # stylix = {
+  #   image = /home/ash/Pictures/walls/rice/neon_car.png;
+  #
+  #   cursor = {
+  #     package = pkgs.bibata-cursors;
+  #     name = "Bibata-Modern-Ice";
+  #   };
+  #
+  #   fonts = {
+  #     monospace = {
+  #       package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
+  #       name = "JetBrainsMono Nerd Font Mono";
+  #     };
+  #     sansSerif = {
+  #       package = pkgs.dejavu_fonts;
+  #       name = "DejaVu Sans";
+  #     };
+  #     serif = {
+  #       package = pkgs.dejavu_fonts;
+  #       name = "DejaVu Serif";
+  #     };
+  #   };
+  # };
 }
