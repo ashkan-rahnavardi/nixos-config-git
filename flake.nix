@@ -11,7 +11,7 @@
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 
     # Themeing type tings
-    stylix.url = "github:danth/stylix";
+    # stylix.url = "github:danth/stylix";
   };
 
   outputs = {
@@ -31,7 +31,7 @@
         specialArgs = {inherit inputs outputs;}; # this is the important part
         modules = [
           ./system/configuration.nix
-          inputs.stylix.nixosModules.stylix
+          # inputs.stylix.nixosModules.stylix
         ];
       };
     };
