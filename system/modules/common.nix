@@ -166,6 +166,7 @@
     kate
     xorg.xev # shows key output
     xorg.xmodmap # shows key mappings
+    imagemagick
   ];
 
   # Docker configuration
