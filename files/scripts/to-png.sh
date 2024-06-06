@@ -25,8 +25,16 @@ for file in "$DIR"/*; do
 		extension="${filename##*.}"
 		filename="${filename%.*}"
 
-		# Convert the file to PNG format
-		magick convert "$file" "$DIR/$filename.png"
+		# Check if the image is grayscale
+		colorspace=$(magick identify -format "%[colorspace]" "$file")
+
+		if [[ "$colorspace" == "Gray" ]]; then
+			# Strip color profile if grayscale and convert to PNG
+			magick convert "$file" -strip "$DIR/$filename.png"
+		else
+			# Just convert if not grayscale
+			magick convert "$file" "$DIR/$filename.png"
+		fi
 
 		# Alternate between two emojis
 		if ((counter % 2 == 0)); then
@@ -40,4 +48,4 @@ for file in "$DIR"/*; do
 	fi
 done
 
-echo "Conversion completed."
+echo "🥵🥵🥵🥵 That was a lot of shiddn n pissn but I finished"
