@@ -99,13 +99,13 @@
     desktopManager.plasma5.enable = true;
   };
 
-  services.xserver.displayManager.sddm = {
+  services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
     settings = {
       wayland = {
         enableHidpiSupport = true;
-        enableVsync = true;
+        #  enableVsync = true;
       };
     };
   };
