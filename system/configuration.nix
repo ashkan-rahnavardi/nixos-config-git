@@ -1,13 +1,8 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
+{...}: {
   imports = [
     ./hardware-configuration.nix
-    ./modules/common.nix
+    ./modules/system.nix
+    ./modules/display.nix
     ./modules/hyprland.nix
   ];
 
