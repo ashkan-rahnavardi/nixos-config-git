@@ -15,7 +15,6 @@ in {
         "video/mp4" = ["org.gnome.Totem.desktop"];
         "video/quicktime" = ["org.gnome.Totem.desktop"];
         "video/webm" = ["org.gnome.Totem.desktop"];
-        "x-scheme-handler/tg" = ["org.telegram.desktop.desktop"];
       };
       defaultApplications = {
         "application/x-extension-htm" = browser;
@@ -45,7 +44,6 @@ in {
         "video/*" = ["org.gnome.Totem.dekstop"];
         "video/mp4" = ["org.gnome.Totem.dekstop"];
         "x-scheme-handler/spotify" = ["spotify.desktop"];
-        "x-scheme-handler/tg" = ["telegramdesktop.desktop"];
       };
     };
 
