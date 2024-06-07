@@ -7,11 +7,17 @@
     enable = true;
     xwayland.enable = true;
     #  nvidiaPatches = true;
-    portalPackage =
-      pkgs.xdg-desktop-portal-wlr
-      // {
-        override = args: pkgs.xdg-desktop-portal-wlr.override (builtins.removeAttrs args ["hyprland"]);
-      };
+    # portalPackage =
+    #   pkgs.xdg-desktop-portal-wlr
+    #   // {
+    #     override = args: pkgs.xdg-desktop-portal-wlr.override (builtins.removeAttrs args ["hyprland"]);
+    #   };
+  };
+
+  # enable gnome portal
+  services.xdg = {
+    portal.enable = true;
+    portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
   # Enable dconf for config settings
@@ -27,7 +33,7 @@
     XDG_SESSION_DESKTOP = "Hyprland";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
-    XDG_RUNTIME_DIR = "/run/user/${config.users.users.ash.uid}";
+    # XDG_RUNTIME_DIR = "/run/user/${config.users.users.ash.uid}";
 
     # QT Variables
     QT_QPA_PLATFORM = "wayland;xcb";
