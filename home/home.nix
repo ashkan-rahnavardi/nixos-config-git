@@ -15,6 +15,7 @@
     ./modules/spicetify.nix
     ./modules/tmux.nix
     ./modules/zsh.nix
+    ./modules/ranger.nix
   ];
 
   home.packages = with pkgs; [
