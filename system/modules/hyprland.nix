@@ -1,16 +1,8 @@
-{pkgs, ...}: {
-  # Call dbus-update-activation-environment on login
-  services.xserver.updateDbusEnvironment = true;
-
-  # Enables support for Bluetooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-
-  # Enable Bluetooth support
-  services.blueman.enable = true;
-
+{
+  pkgs,
+  config,
+  ...
+}: {
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -22,21 +14,28 @@
       };
   };
 
-  # Enable security services
-  services.gnome.gnome-keyring.enable = true;
-  security.polkit.enable = true;
-  security.pam.services = {
-    hyprlock = {};
-    gdm.enableGnomeKeyring = true;
-  };
+  # Enable dconf for config settings
+  programs.dconf.enable = true;
 
   # Enable Ozone Wayland support in Chromium and Electron based applications
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     XCURSOR_SIZE = "24";
     XCURSOR_THEME = "Yaru";
+
+    # XDG specs often detected through portals, doesn't hurt to set them explicility
+    XDG_SESSION_DESKTOP = "Hyprland";
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
+    XDG_RUNTIME_DIR = "/run/user/${config.users.users.ash.uid}";
+
+    # QT Variables
+    QT_QPA_PLATFORM = "wayland;xcb";
     QT_QPA_PLATFORMTHEME = "qt6ct";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+
+    # GTK Variables
+    GDK_BACKEND = "wayland,x11,*";
   };
 
   # List of Hyprland specific packages

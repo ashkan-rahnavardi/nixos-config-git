@@ -29,6 +29,8 @@
       layout = "us";
       variant = "";
     };
+    # Call dbus-update-activation-environment on login
+    updateDbusEnvironment = true;
     # Load Nvidia Drivers
     videoDrivers = ["nvidia"];
     # Exclude certain default packages
