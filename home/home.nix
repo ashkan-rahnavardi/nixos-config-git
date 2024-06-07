@@ -25,6 +25,7 @@
     obsidian
     firefox
     ferdium
+    cava
   ];
 
   home = {
