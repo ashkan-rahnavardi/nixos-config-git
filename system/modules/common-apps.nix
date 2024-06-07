@@ -39,8 +39,6 @@
     tracker # Search tool & indexer
   ];
 
-  services.tracker.enable = true;
-
   # Docker configuration
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
