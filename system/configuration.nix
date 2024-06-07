@@ -4,7 +4,7 @@
     ./modules/system.nix
     ./modules/display.nix
     ./modules/common-apps.nix
-    ./modules/hyprland.nix
+    ./modules/hyprland2.nix
   ];
 
   # Set hostname

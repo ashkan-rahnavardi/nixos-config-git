@@ -36,7 +36,6 @@
     file # Outputs actual file type
     btop # Better CLI Resource viewer
     htop # CLI Resource viewer
-    ranger # CLI FileManager
   ];
 
   # Docker configuration
