@@ -42,9 +42,6 @@
       lt = "eza --tree --level=2 --icons"; # tree
     };
     initExtra = ''
-      # kubectl auto-complete
-      source <(kubectl completion zsh)
-
       # bindings
       bindkey -v
       bindkey -s ^f "cd-to-project\n"
@@ -67,22 +64,7 @@
         directory = {
           style = "bold lavender";
         };
-        aws = {
-          disabled = true;
-        };
-        kubernetes = {
-          disabled = false;
-          style = "bold pink";
-          format = "[$symbol$context( \($namespace\))]($style)";
-          contexts = [
-            {
-              context_pattern = "arn:aws:eks:(?P<var_region>.*):(?P<var_account>[0-9]{12}):cluster/(?P<var_cluster>.*)";
-              context_alias = "$var_cluster";
-            }
-          ];
-        };
         palette = "catppuccin_${flavour}";
-        right_format = "$kubernetes";
       }
       // builtins.fromTOML (builtins.readFile
         (pkgs.fetchFromGitHub
