@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./modules/hyprland.nix
     ./modules/alacritty.nix
@@ -23,6 +19,7 @@
 
   home.packages = with pkgs; [
     obsidian
+    firefox
   ];
 
   home = {

@@ -1,53 +1,41 @@
 {pkgs, ...}: {
   # List of common packages
   environment.systemPackages = with pkgs; [
-    anki
-    awscli2
-    brave
-    delta
-    dig
-    docker-compose
-    du-dust
-    eza
-    fd
-    gcc
-    glib
-    gnumake
-    go
-    helmfile
-    jq
-    killall
-    kubectl
-    kubernetes-helm
-    lazydocker
-    mesa
-    nh
-    obs-studio
+    delta # Syntax highlighting pager for git
+    dig # Gets DNS information
+    docker-compose # Docker tool
+    du-dust # CLI to view disk usage
+    eza # Better list
+    fd # Better Find
+    gcc # GNU Compiler Collections
+    glib # Low level system libraries
+    gnumake # Build automation tool
+    go # Golang
+    jq # like `seq` but for JSON data
+    killall # Command to terminate processes
+    lazydocker # CLI Docker Management
+    mesa # 3D Graphics Library
+    nh # Nix Helper
+    obs-studio # Screen Casting & Streaming
     (python3.withPackages (ps:
       with ps; [
         pip
         virtualenv
       ]))
-    pipenv
-    pulseaudio
-    qt6.qtwayland
-    resources
-    ripgrep
-    sops
-    telegram-desktop
-    terraform
-    terragrunt
-    unzip
-    wget
-    wl-clipboard
-    zoom-us
-    kate
+    pipenv # Python Virtual Environment
+    pulseaudio # Sound Server
+    resources # Resource Managment / Viewer
+    ripgrep # Better Grep
+    unzip # Extract Zips
+    wget # Retrieves content from web servers
+    wl-clipboard # Wayland Clipboard
+    kate # Text Editor
     xorg.xev # shows key output
     xorg.xmodmap # shows key mappings
-    imagemagick
-    file
-    btop
-    htop
+    imagemagick # Image converter / tool
+    file # Outputs actual file type
+    btop # Better CLI Resource viewer
+    htop # CLI Resource viewer
   ];
 
   # Docker configuration
@@ -57,8 +45,8 @@
     setSocketVariable = true;
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
+  # # Install firefox.
+  # programs.firefox.enable = true;
 
   # Zsh configuration
   programs.zsh = {
