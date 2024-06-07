@@ -1,16 +1,12 @@
-{
-  pkgs,
-  user,
-  ...
-}: let
+{pkgs, ...}: let
   extraConfig = pkgs.writeShellScriptBin "hyprland-extra-config" ''
-    if ! [ -f ${user.home}/.config/hypr/extra.conf ]; then
-      touch ${user.home}/.config/hypr/extra.conf
+    if ! [ -f /home/ash/.config/hypr/extra.conf ]; then
+      touch /home/ash/.config/hypr/extra.conf
       hyprctl reload
     fi
   '';
   launcher = pkgs.writeShellScriptBin "hyprland-launcher" ''
-    . "${user.home}/.nix-profile/etc/profile.d/hm-session-vars.sh"
+    . "/home/ash/.nix-profile/etc/profile.d/hm-session-vars.sh"
     dbus-run-session ${pkgs.hyprland}/bin/Hyprland &> /dev/null
   '';
   startPortals = pkgs.writeShellScriptBin "start-portals" ''
@@ -244,7 +240,7 @@ in {
     enable = true;
     xwayland.enable = true;
     extraConfig = ''
-      source=${user.home}/.config/hypr/autoexec.conf
+      source=/home/ash/.config/hypr/autoexec.conf
       source=${hyprland_config}
     '';
   };
