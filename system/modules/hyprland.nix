@@ -6,6 +6,7 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    # portalPackage = [pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk];
     #  nvidiaPatches = true;
     # portalPackage =
     #   pkgs.xdg-desktop-portal-wlr
@@ -14,10 +15,10 @@
     #   };
   };
 
-  # enable gnome portal
-  services.xdg = {
-    portal.enable = true;
-    portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  # # enable gnome portal
+  xdg.portal = {
+    enable = true;
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
   # Enable dconf for config settings
