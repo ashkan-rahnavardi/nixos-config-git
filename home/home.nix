@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./modules/hyprland.nix
     ./modules/alacritty.nix
@@ -25,6 +29,12 @@
   home = {
     username = "ash";
     homeDirectory = "/home/ash";
+  };
+
+  # Set environment variables
+  home.sessionVariables = {
+    XDG_DATA_HOME = "${config.home.homeDirectory}/.local/share";
+    XDG_DATA_DIRS = "${config.home.homeDirectory}/.nix-profile/share:/run/current-system/sw/share";
   };
 
   nixpkgs.config.allowUnfree = true;

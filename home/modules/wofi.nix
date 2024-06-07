@@ -5,7 +5,7 @@
     settings = {
       insensitive = true;
       normal_window = true;
-      prompt = "Search...";
+      prompt = "𝗚𝗼𝗱'𝘀 𝗦𝗼𝗻";
       width = "50%";
       height = "40%";
       key_up = "Ctrl-k";
