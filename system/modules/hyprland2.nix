@@ -43,9 +43,8 @@ in {
   services = {
     gnome.gnome-keyring.enable = true;
     udisks2.enable = true;
+    dbus.packages = portalPackages;
   };
-
-  dbus.packages = portalPackages;
 
   environment = {
     pathsToLink = ["/share/applications"];
