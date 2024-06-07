@@ -21,11 +21,11 @@
     enable = true;
     xwayland.enable = true;
     #  nvidiaPatches = true;
-    # portalPackage =
-    #   pkgs.xdg-desktop-portal-wlr
-    #   // {
-    #     override = args: pkgs.xdg-desktop-portal-wlr.override (builtins.removeAttrs args ["hyprland"]);
-    #   };
+    portalPackage =
+      pkgs.xdg-desktop-portal-wlr
+      // {
+        override = args: pkgs.xdg-desktop-portal-wlr.override (builtins.removeAttrs args ["hyprland"]);
+      };
   };
 
   # Enable security services
