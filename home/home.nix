@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./modules/hyprland.nix
+    ./modules/hyprland2.nix
     ./modules/alacritty.nix
     ./modules/bat.nix
     ./modules/bottom.nix
