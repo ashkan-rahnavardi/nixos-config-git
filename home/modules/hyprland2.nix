@@ -17,7 +17,7 @@
     systemctl --user start xdg-desktop-portal-hyprland
   '';
   lock = builtins.toPath "/home/ash/Pictures/walls/rice/feet_on_dash.png";
-  hyprland_config = ./../../files/configs/hypr;
+  hyprland_config = ./../../files/configs/hypr/hyprland.conf;
 in {
   imports = [
     ./clipboard.nix
