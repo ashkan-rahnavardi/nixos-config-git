@@ -30,6 +30,8 @@ in {
         "x-scheme-handler/http" = browser;
         "x-scheme-handler/https" = browser;
         "x-scheme-handler/unknown" = browser;
+        "inode/directory" = "org.gnome.Nautilus.desktop";
+        "x-scheme-handler/file" = "org.gnome.Nautilus.desktop";
 
         "application/json" = ["gnome-text-editor.desktop"];
         "application/pdf" = browser;
