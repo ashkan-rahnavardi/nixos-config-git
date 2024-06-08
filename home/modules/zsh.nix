@@ -7,7 +7,7 @@
       cat = "bat -p";
       ff = "fastfetch";
 
-      rr = "~/.local/bin/ranger_cd.sh";
+      rr = "ranger";
 
       # git
       gaa = "git add --all";
