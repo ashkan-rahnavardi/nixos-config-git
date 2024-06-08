@@ -15,10 +15,10 @@
   services.devmon.enable = true;
   services.udisks2.enable = true;
 
-  fileSystems."/mnt/storage" = {
-    device = "/dev/disk/by-uuid/24648CA6648C7BF4";
-    fsType = "ntfs-3g";
-  };
+  # fileSystems."/mnt/storage" = {
+  #   device = "/dev/disk/by-uuid/24648CA6648C7BF4";
+  #   fsType = "ntfs-3g";
+  # };
 
   # Enable sound with pipewire.
   sound.enable = true;
