@@ -21,6 +21,7 @@
       with ps; [
         pip
         virtualenv
+        pygments
       ]))
     pipenv # Python Virtual Environment
     pulseaudio # Sound Server
