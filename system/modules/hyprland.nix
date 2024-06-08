@@ -31,18 +31,18 @@
     XCURSOR_THEME = "Yaru";
 
     # XDG specs often detected through portals, doesn't hurt to set them explicility
-    XDG_SESSION_DESKTOP = "Hyprland";
-    XDG_CURRENT_DESKTOP = "Hyprland";
-    XDG_SESSION_TYPE = "wayland";
+    # XDG_SESSION_DESKTOP = "Hyprland";
+    # XDG_CURRENT_DESKTOP = "Hyprland";
+    # XDG_SESSION_TYPE = "wayland";
     # XDG_RUNTIME_DIR = "/run/user/${config.users.users.ash.uid}";
 
     # QT Variables
-    QT_QPA_PLATFORM = "wayland;xcb";
+    # QT_QPA_PLATFORM = "wayland;xcb";
     QT_QPA_PLATFORMTHEME = "qt6ct";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
 
     # GTK Variables
-    GDK_BACKEND = "wayland,x11,*";
+    # GDK_BACKEND = "wayland,x11,*";
   };
 
   # List of Hyprland specific packages
@@ -63,6 +63,7 @@
     qt6.qtwayland
     qt5.qtwayland
 
+    pyprland
     brightnessctl
     grim
     hypridle
