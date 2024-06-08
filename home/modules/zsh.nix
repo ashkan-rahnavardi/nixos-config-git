@@ -7,6 +7,8 @@
       cat = "bat -p";
       ff = "fastfetch";
 
+      rr = "~/.local/bin/ranger_cd.sh";
+
       # git
       gaa = "git add --all";
       gcam = "git commit --all --message";
