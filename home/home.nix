@@ -24,6 +24,7 @@
     ferdium
     cava
     chromium
+    kitty
   ];
 
   home = {
