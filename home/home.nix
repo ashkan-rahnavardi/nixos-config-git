@@ -16,6 +16,7 @@
     ./modules/tmux.nix
     ./modules/zsh.nix
     ./modules/ranger.nix
+    ./modules/nnn.nix
   ];
 
   home.packages = with pkgs; [

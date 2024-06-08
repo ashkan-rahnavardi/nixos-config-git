@@ -10,11 +10,6 @@
     extraConfig = ''
       set preview_images true
       set show_hidden true
-      set preview_images_method ueberzugpp
-    '';
-
-    rifle = ''
-      mime ^image, has ueberzugpp, terminal = ueberzugpp %s
     '';
   };
 }
