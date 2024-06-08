@@ -1,5 +1,5 @@
 [pyprland]
-plugins = ["scratchpads", "magify"]
+plugins = ["scratchpads", "magnify"]
 
 [scratchpads.spoti]
 command = "spotify --class scratchpad"
