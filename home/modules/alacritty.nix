@@ -12,7 +12,6 @@
 
       env = {
         TERM = "xterm-256color";
-        WINIT_UNIX_BACKEND = "x11";
       };
 
       window = {

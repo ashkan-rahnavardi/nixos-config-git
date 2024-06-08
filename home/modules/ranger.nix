@@ -35,11 +35,12 @@
 
     extraConfig = ''
       set preview_images true
-      set use_preview_script true
-      set preview_images_method ueberzug
+      set preview_images_method kitty
       set show_hidden true
-      set preview_script ~/.local/bin/ranger_scope.sh
     '';
+
+    # set use_preview_script true
+    # set preview_script ~/.local/bin/ranger_scope.sh
 
     # set preview_images_method ueberzugpp  -- setting ueberzugpp causes ranger to crash b/c its not recognized as an option
 
