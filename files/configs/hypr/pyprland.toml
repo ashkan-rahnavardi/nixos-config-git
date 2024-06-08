@@ -6,4 +6,15 @@ command = "spotify --class scratchpad"
 margin = 50
 unfocus = "hide"
 animation = "fromTop"
+position = "50% 0%"
+size = "50% 50%"
+class = "scratchpad"
+
+[scratchpads.kittyy]
+command = "kitty --class scratchpad -e ranger"
+unfocus = "hide"
+animation = "fromTop"
+position = "50% 0%"
+size = "50% 50%"
+class = "scratchpad"
 
