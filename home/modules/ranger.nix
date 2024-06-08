@@ -32,11 +32,12 @@
 
     extraConfig = ''
       set preview_images true
-      set preview_images_method ueberzugpp
       set use_preview_script true
       set show_hidden true
       set preview_script ~/.local/bin/ranger_scope.sh
     '';
+
+    # set preview_images_method ueberzugpp  -- setting ueberzugpp causes ranger to crash b/c its not recognized as an option
 
     # set preview_script /home/ash/.nix-profile/bin/pistol
   };
