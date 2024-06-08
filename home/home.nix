@@ -17,12 +17,12 @@
     ./modules/zsh.nix
     ./modules/ranger.nix
     ./modules/nnn.nix
-    # ./modules/kitty.nix
+    ./modules/kitty.nix
   ];
 
   home.packages = with pkgs; [
     obsidian
-    kitty
+
     firefox
     ferdium
     cava

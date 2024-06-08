@@ -30,10 +30,15 @@
       window_padding_width = 15;
       hide_window_decorations = "yes";
       background_opacity = "0.7";
-
-      font_size = 12;
-      font_family = "JetBrainsMono Nerd Font Regular";
+      font_family = "Liberation Mono";
+      # bold_font = "JetBrainsMono Nerd Font Mono Bold";
+      # bold_italic_font = "JetBrainsMono Nerd Font Mono Bold Italic";
     };
+
+    # font = {
+    #   name = "JetBrainsMono Nerd Font";
+    #   size = 12;
+    # };
 
     theme = "Wild Cherry";
   };

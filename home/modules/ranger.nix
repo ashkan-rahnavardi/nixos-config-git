@@ -37,6 +37,7 @@
       set preview_images true
       set preview_images_method kitty
       set show_hidden true
+      set preview_script ~/.local/bin/ranger_scope.sh
     '';
 
     # set use_preview_script true
