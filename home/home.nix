@@ -23,6 +23,7 @@
     firefox
     ferdium
     cava
+    chromium
   ];
 
   home = {
