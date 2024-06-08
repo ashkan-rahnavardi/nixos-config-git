@@ -1,0 +1,16 @@
+{
+  "pyprland": {
+    "plugins": [
+      "scratchpads",
+      "magnify"
+    ]
+  },
+  "scratchpads": {
+    "spoti": {
+      "command": "spotify --class scratchpad",
+      "margin": 50,
+      "unfocus": "hide",
+      "animation": "fromBottom"
+    }
+  }
+}
