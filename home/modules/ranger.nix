@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    ueberzug
+    ueberzugpp
     imagemagick # Already installed system level
     exiftool
     atool
@@ -32,7 +32,8 @@
 
     extraConfig = ''
       set preview_images true
-      set preview_images_method ueberzug
+      set preview_images_method ueberzugpp
+      set use_preview_script true
       set show_hidden true
       set preview_script ~/.local/bin/ranger_scope.sh
     '';

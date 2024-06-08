@@ -165,21 +165,30 @@ handle_image() {
 			exit 6 || exit 1
 		;;
 
-	## Image
+		## Image
 	image/*)
-		local orientation
-		orientation="$(identify -format '%[EXIF:Orientation]\n' -- "${FILE_PATH}")"
-		## If orientation data is present and the image actually
-		## needs rotating ("1" means no rotation)...
-		if [[ -n "$orientation" && "$orientation" != 1 ]]; then
-			## ...auto-rotate the image according to the EXIF data.
-			convert -- "${FILE_PATH}" -auto-orient "${IMAGE_CACHE_PATH}" && exit 6
-		fi
-
-		## `w3mimgdisplay` will be called for all images (unless overridden
-		## as above), but might fail for unsupported types.
-		exit 7
+		ueberzugpp layer --identifier ranger --action add \
+			--path "${FILE_PATH}" --x 0 --y 0 --width "${PV_WIDTH}" --height "${PV_HEIGHT}" \
+			--scaler 'crop' --scaling-position 'center' >"${IMAGE_CACHE_PATH}"
+		exit 6
 		;;
+
+		# OLD IMAGE FUNCTION
+		## Image
+	# image/*)
+	# 	local orientation
+	# 	orientation="$(identify -format '%[EXIF:Orientation]\n' -- "${FILE_PATH}")"
+	# 	## If orientation data is present and the image actually
+	# 	## needs rotating ("1" means no rotation)...
+	# 	if [[ -n "$orientation" && "$orientation" != 1 ]]; then
+	# 		## ...auto-rotate the image according to the EXIF data.
+	# 		convert -- "${FILE_PATH}" -auto-orient "${IMAGE_CACHE_PATH}" && exit 6
+	# 	fi
+	#
+	# 	## `w3mimgdisplay` will be called for all images (unless overridden
+	# 	## as above), but might fail for unsupported types.
+	# 	exit 7
+	# 	;;
 
 	## Video
 	# video/*)
