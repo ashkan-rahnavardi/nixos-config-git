@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  ueberzugpp = pkgs.ueberzugpp;
+in {
   home.packages = with pkgs; [
     ueberzugpp
     imagemagick # Already installed system level
@@ -27,12 +29,16 @@
     # python312Packages.pygments
   ];
 
+  # Create symbolic link so ueberzugpp gets called instead of ueberzug
+  home.file.".local/bin/ueberzug".source = "${ueberzugpp}/bin/euberzugpp";
+
   programs.ranger = {
     enable = true;
 
     extraConfig = ''
       set preview_images true
       set use_preview_script true
+      set preview_images_method ueberzug
       set show_hidden true
       set preview_script ~/.local/bin/ranger_scope.sh
     '';
