@@ -1,0 +1,9 @@
+[pyprland]
+plugins = ["scratchpads", "magify"]
+
+[scratchpads.spoti]
+command = "spotify --class scratchpad"
+margin = 50
+unfocus = "hide"
+animation = "fromTop"
+
