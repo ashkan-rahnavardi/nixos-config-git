@@ -17,6 +17,7 @@
     ./modules/zsh.nix
     ./modules/ranger.nix
     ./modules/nnn.nix
+    ./modules/kitty.nix
   ];
 
   home.packages = with pkgs; [
@@ -25,7 +26,6 @@
     ferdium
     cava
     chromium
-    kitty
   ];
 
   home = {

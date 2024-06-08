@@ -1,9 +1,6 @@
-{pkgs, ...}: let
-  ueberzugpp = pkgs.ueberzugpp;
-in {
+{pkgs, ...}: {
   home.packages = with pkgs; [
-    ueberzugpp
-    imagemagick # Already installed system level
+    # imagemagick # Already installed system level
     exiftool
     atool
     #   bsdtar -- not in nixstore
@@ -26,11 +23,12 @@ in {
     highlight
     w3m
     pistol
+    ueberzug
     # python312Packages.pygments
   ];
 
   # Create symbolic link so ueberzugpp gets called instead of ueberzug
-  home.file.".local/bin/ueberzug".source = "${ueberzugpp}/bin/euberzugpp";
+  # home.file.".local/bin/ueberzug".source = "${ueberzugpp}/bin/euberzugpp";
 
   programs.ranger = {
     enable = true;
