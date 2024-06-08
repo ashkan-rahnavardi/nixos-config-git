@@ -3,10 +3,9 @@ plugins = ["scratchpads", "magnify"]
 
 [scratchpads.spoti]
 command = "spotify --class scratchpad"
-margin = 50
 unfocus = "hide"
 animation = "fromTop"
-position = "50% 0%"
+position = "0% 50%"
 size = "50% 50%"
 class = "scratchpad"
 
@@ -14,7 +13,7 @@ class = "scratchpad"
 command = "kitty --class scratchpad -e ranger"
 unfocus = "hide"
 animation = "fromTop"
-position = "50% 0%"
+position = "0% 50%"
 size = "50% 50%"
 class = "scratchpad"
 
