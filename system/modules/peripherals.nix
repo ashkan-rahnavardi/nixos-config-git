@@ -15,8 +15,8 @@
   services.devmon.enable = true;
   services.udisks2.enable = true;
 
-  fileSystems."/storage" = {
-    device = "/dev/disk/by-label/Storage";
+  fileSystems."/mnt/storage" = {
+    device = "/dev/disk/by-uuid/24648CA6648C7BF4";
     fsType = "ntfs-3g";
   };
 
