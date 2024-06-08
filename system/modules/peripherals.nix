@@ -13,6 +13,12 @@
 
   # Enable storage services
   services.devmon.enable = true;
+  services.udisks2.enable = true;
+
+  fileSystems."/storage" = {
+    device = "/dev/disk/by-label/Storage";
+    fsType = "ntfs-3g";
+  };
 
   # Enable sound with pipewire.
   sound.enable = true;

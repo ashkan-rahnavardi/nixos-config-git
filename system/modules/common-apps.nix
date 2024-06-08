@@ -38,6 +38,7 @@
     htop # CLI Resource viewer
     w3m # text-based web browser
     ueberzug # image preview for ranger
+    ntfs3g # enables read & write for ntfs files
   ];
 
   # Docker configuration

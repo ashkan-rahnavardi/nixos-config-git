@@ -57,6 +57,7 @@
     gnome.seahorse # keyring manager
     gnome.totem # Video player
     loupe # image viewer
+    gnome.gnome-disk-utility
 
     # Qt Wayland Support
     qt6.qtwayland
