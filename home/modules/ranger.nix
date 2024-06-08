@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    # imagemagick # Already installed system level
+    imagemagick # Already installed system level
     exiftool
     atool
     #   bsdtar -- not in nixstore
@@ -23,7 +23,7 @@
     highlight
     w3m
     pistol
-    ueberzug
+
     # python312Packages.pygments
   ];
 
