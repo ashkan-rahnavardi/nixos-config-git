@@ -6,7 +6,12 @@ command = "spotify"
 animation = "fromTop"
 unfocus = "hide"
 
-[scratchpads.kittyy]
-command = "kitty --class scratchpad -e ranger"
-class = "scratchpad"
+
+# Not Positioning well
+# [scratchpads.kittyy]
+# command = "kitty --class scratchpad -e ranger"
+# margin = 50
+# position = "0% 0%"
+# size = "85% 85%"
+# class = "scratchpad"
 
