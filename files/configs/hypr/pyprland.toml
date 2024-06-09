@@ -6,6 +6,10 @@ command = "spotify"
 animation = "fromTop"
 unfocus = "hide"
 
+[scratchpads.ferdi]
+command = "ferdium --class ferdium"
+unfocus = "hide"
+animation = "fromBottom"
 
 # Not Positioning well
 # [scratchpads.kittyy]
