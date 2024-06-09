@@ -31,6 +31,8 @@
 
   # home.file.".local/bin/ueberzug".source = "${ueberzugpp}/bin/ueberzugpp";
 
+  # PooPooPEEpEE
+  #
   home = {
     username = "ash";
     homeDirectory = "/home/ash";
