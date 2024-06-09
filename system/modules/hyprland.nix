@@ -58,7 +58,10 @@
     gnome.totem # Video player
     loupe # image viewer
     gnome.gnome-disk-utility
-
+    # libGL
+    # libGLU
+    # tracker
+    mpv
     # Qt Wayland Support
     qt6.qtwayland
     qt5.qtwayland
