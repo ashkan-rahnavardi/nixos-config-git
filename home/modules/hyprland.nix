@@ -1,5 +1,4 @@
 {...}: let
-  lock = builtins.toPath "/home/ash/Pictures/walls/rice/feet_on_dash.png";
   hyprland_config = ./../../files/configs/hypr;
 in {
   imports = [
@@ -11,6 +10,7 @@ in {
     ./wofi.nix
     ./xdg.nix
     ./hyprpaper.nix
+    ./hyprlock.nix
   ];
 
   xdg.configFile = {
