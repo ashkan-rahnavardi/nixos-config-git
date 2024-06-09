@@ -1,49 +1,66 @@
-{...}:
-let 
- lock = /home/ash/Pictures/walls/rice/feet_on_dash.png
-in
-{
-programs.hyprlock = {
+{...}: let
+  lock = /home/ash/Pictures/walls/rice/feet_on_dash.png;
+in {
+  programs.hyprlock = {
     enable = true;
 
     settings = {
+      background = [
+        {
+          monitor = "";
+          path = "${lock}";
+          blur_passes = 3;
+          contrast = 0.8916;
+          brightness = 0.8172;
+          vibrancy = 0.1696;
+          vibrancy_darkness = 0.0;
+        }
+      ];
 
-background = [
-  {
-    monitor =;
-    path = "${lock}";
-    blur_passes = 3;
-    contrast = 0.8916;
-    brightness = 0.8172;
-    vibrancy = 0.1696;
-    vibrancy_darkness = 0.0;
+      general = [
+        {
+          no_fade_in = false;
+          grace = 0;
+          disable_loading_bar = true;
+        }
+      ];
+
+      input-field = [
+        {
+          size = "250, 60";
+          position = "0, -80";
+          monitor = "";
+          dots_center = true;
+          dots_size = 0.2;
+          dots_spacing = 0.2;
+          fade_on_empty = false;
+          font_color = "rgb(202, 211, 245)";
+          inner_color = "rgb(91, 96, 120)";
+          outer_color = "rgb(24, 25, 38)";
+          outline_thickness = 5;
+          placeholder_text = ''<span foreground="##cad3f5">Password...</span>'';
+          shadow_passes = 2;
+        }
+      ];
+
+      label = [
+        {
+          monitor = "";
+          text = ''$TIME'';
+          color = "rgba(200,200,200,1.0)";
+          font_size = 25;
+          font_family = "Jetbrains mono nerd font mono extrabold";
+          rotate = 0;
+          position = "0, 80";
+          halign = "center";
+          valign = "center";
+        }
+      ];
+    };
+  };
 }
-];
-
-general = [ 
-  {
-    no_fade_in = false;
-    grace = 0;
-    disable_loading_bar = true;
-  }
-];
-input-field = [
-    {
-      size = "200, 50";
-      position = "0, -80";
-      monitor = "";
-      dots_center = true;
-      fade_on_empty = false;
-      font_color = "rgb(202, 211, 245)";
-      inner_color = "rgb(91, 96, 120)";
-      outer_color = "rgb(24, 25, 38)";
-      outline_thickness = 5;
-      placeholder_text = '\'<span foreground="##cad3f5">Password...</span>'\';
-      shadow_passes = 2;
-    }
-  ];
 # # dp-1 conifg
-# input-field = [ 
+# input-field = [
 # {
 #     monitor = "dp-1";
 #     size = "250, 60";
@@ -66,7 +83,7 @@ input-field = [
 # ];
 #
 # # date
-# label = [ 
+# label = [
 # {
 #     monitor = "dp-1";
 #     text = '\'"<span>$(date '+%a, %d %b')</span>"'\';
@@ -78,7 +95,6 @@ input-field = [
 #     valign = "top";
 # }
 # ];
-
 # label = [ {
 #     monitor = "dp-1"
 #     text = '\'cmd[update:1000] echo "<span>$(date '+%h:%m')</span>"'\';
@@ -101,7 +117,6 @@ input-field = [
 #     halign = "center";
 #     valign = "center";
 # };];
-
 # # dp-2 conifg
 # input-field {
 #     monitor = dp-4
@@ -217,4 +232,3 @@ input-field = [
 # }
 #       }
 #   }
-  }
