@@ -49,6 +49,7 @@ in {
         "image/jpg" = ["org.gnome.loupe.desktop"];
         "image/png" = ["org.gnome.loupe.desktop"];
         "text/plain" = "org.gnome.TextEditor.desktop";
+        "text/csv" = ["gnumeric.desktop"];
         "video/*" = ["mpv.dekstop"];
         "video/mp4" = ["mpv.dekstop"];
         # "video/*" = ["org.gnome.Totem.dekstop"];

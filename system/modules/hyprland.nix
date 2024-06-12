@@ -58,6 +58,7 @@
     gnome.totem # Video player
     loupe # image viewer
     gnome.gnome-disk-utility
+    gnumeric # CSV Viewer
     # libGL
     # libGLU
     # tracker
