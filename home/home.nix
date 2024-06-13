@@ -18,6 +18,7 @@
     ./modules/ranger.nix
     ./modules/nnn.nix
     ./modules/kitty.nix
+    ./modules/ags.nix
   ];
 
   home.packages = with pkgs; [
