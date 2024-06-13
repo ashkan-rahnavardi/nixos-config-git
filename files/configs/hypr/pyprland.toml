@@ -7,9 +7,9 @@ animation = "fromTop"
 unfocus = "hide"
 
 [scratchpads.ferdi]
-command = "ferdium --class ferdium"
-unfocus = "hide"
+command = "ferdium"
 animation = "fromBottom"
+
 
 # Not Positioning well
 # [scratchpads.kittyy]
