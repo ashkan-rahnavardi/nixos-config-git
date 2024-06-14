@@ -10,7 +10,6 @@
     spicetify-nix.url = "github:MichaelPachec0/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    ags.url = "github:Aylur/ags";
     # Themeing type tings
     # stylix.url = "github:danth/stylix";
   };
