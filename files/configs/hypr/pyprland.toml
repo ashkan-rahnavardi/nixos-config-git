@@ -3,8 +3,10 @@ plugins = ["scratchpads", "magnify"]
 
 [scratchpads.spoti]
 command = "spotify"
-animation = "fromTop"
 unfocus = "hide"
+animation = "fromTop"
+position = "25% 40%"
+
 
 [scratchpads.ferdi]
 command = "ferdium"
