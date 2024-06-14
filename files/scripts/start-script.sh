@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 
-systemctl --user start xdg-desktop-portal.gtk.service
-# wlr-randr --output DP-1 --mode 2560x1440@144
+# AutoConnect to Speaker
+JBL_SPEAKER="5C:FB:7C:2F:BA:4A"
+bluetoothctl power on
+bluetoothctl agent on
+bluetoothctl connect $JBL_SPEAKER
+bluetoothctl agent NoInputNoOutput
