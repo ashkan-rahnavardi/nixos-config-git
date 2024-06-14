@@ -12,12 +12,14 @@ in {
 
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.Catppuccin;
-    colorScheme = "macchiato";
+    theme = spicePkgs.themes.text;
+    colorScheme = "rosepine";
 
     enabledExtensions = with spicePkgs.extensions; [
       keyboardShortcut
       shuffle
+      fullAppDisplay
+      playlistIcons
     ];
   };
 }

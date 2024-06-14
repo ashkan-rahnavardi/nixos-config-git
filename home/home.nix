@@ -22,7 +22,6 @@
 
   home.packages = with pkgs; [
     obsidian
-
     firefox
     ferdium
     cava
