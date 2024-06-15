@@ -47,9 +47,6 @@
     auto-optimise-store = true;
   };
 
-  # Ensure VFIO options are properly enabled
-  options.vfio.enable = lib.mkEnableOption "Configure the machine for VFIO";
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
