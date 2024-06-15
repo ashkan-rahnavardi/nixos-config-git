@@ -6,7 +6,8 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./modules/boot_test.nix
+    # ./modules/boot_test.nix
+    ./modules/boot.nix
     ./modules/users.nix
     ./modules/locale.nix
     ./modules/fonts.nix
@@ -16,6 +17,7 @@
     ./modules/display.nix
     ./modules/common-apps.nix
     ./modules/hyprland.nix
+    # ./modules/virtualization-passthrough-notworking.nix
     ./modules/virtualization.nix
   ];
 

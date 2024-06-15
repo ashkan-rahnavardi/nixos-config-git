@@ -12,9 +12,24 @@
 in {
   # Configure kernel options to make sure IOMMU & KVM support is on.
   boot = {
-    kernelModules = ["kvm-${platform}" "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio"];
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+
+    kernelPackages = pkgs.linuxPackages_6_8;
+    kernelModules = ["kvm-${platform}" "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio" "nvidia-drm.modeset=1"];
     kernelParams = ["${platform}_iommu=on" "${platform}_iommu=pt" "kvm.ignore_msrs=1"];
-    extraModprobeConfig = "options vfio-pci ids=${builtins.concatStringsSep "," vfioIds}";
+    # extraModprobeConfig = "options vfio-pci ids=${builtins.concatStringsSep "," vfioIds}";
+
+    postBootCommands = ''
+      DEVS="0000:02:00.0 0000:02:00.1"
+
+      for DEV in $DEVS; do
+        echo "vfio-pci" > /sys/bus/pci/devices/$DEV/driver_override
+      done
+      modprobe -i vfio-pci
+    '';
   };
 
   # Add a file for looking-glass to use later. This will allow for viewing the guest VM's screen in a
@@ -53,5 +68,6 @@ in {
     };
   };
 
+  hardware.opengl.enable = true;
   users.users.${user}.extraGroups = ["qemu-libvirtd" "libvirtd" "disk"];
 }

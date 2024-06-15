@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   # Boot settings
   boot = {
     loader = {
@@ -6,26 +10,30 @@
       efi.canTouchEfiVariables = true;
     };
 
+    kernelPackages = pkgs.linuxPackages_6_8;
     kernelParams = ["intel_iommu=on"];
-    blacklistedKernelModules = ["nvidia" "nouveau"];
-    kernelModules = ["kvm-intel" "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio"];
-
-    postBootCommands = ''
-      DEVS="0000:02:00.0 0000:02:00.1"
-
-      for DEV in $DEVS; do
-        echo "vfio-pci" > /sys/bus/pci/devices/$DEV/driver_override
-      done
-      modprobe -i vfio-pci
+    kernelModules = ["nvidia-drm.modeset=1" "kvm-intel" "vfio" "vfio_iommu_type1" "vfio_pci" "vfio_virqfd"];
+    extraModprobeConfig = ''
+      options vfio-pci ids=10de:13f0,10de:0fbb
     '';
-
-    # kernelPackages = pkgs.linuxPackages_6_8;
-    # kernelParams = ["nvidia-drm.modeset=1" "quiet" "splash"];
-    # consoleLogLevel = 0;
-    # initrd.verbose = false;
-    #
-    # plymouth.enable = true;
   };
 
-  # hardware.opengl.enable = true;
+  # Enable libvirt and QEMU
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      ovmf.enable = true;
+      package = pkgs.qemu_kvm;
+    };
+    extraConfig = ''
+      nvram = [
+        "/nix/store/*-OVMF_CODE.fd:/usr/share/OVMF/OVMF_CODE.fd"
+        "/nix/store/*-OVMF_VARS.fd:/usr/share/OVMF/OVMF_VARS.fd"
+      ]
+    '';
+  };
+
+  users.users.ash.extraGroups = ["libvirtd"];
+
+  hardware.opengl.enable = true;
 }
