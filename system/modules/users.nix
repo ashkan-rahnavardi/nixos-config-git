@@ -3,7 +3,7 @@
   users.users.ash = {
     isNormalUser = true;
     description = "ash";
-    extraGroups = ["networkmanager" "wheel" "docker" "storage"];
+    extraGroups = ["networkmanager" "wheel" "docker" "storage" "libvirtd"];
     shell = pkgs.zsh;
   };
 
