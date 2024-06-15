@@ -16,6 +16,7 @@
     ./modules/display.nix
     ./modules/common-apps.nix
     ./modules/hyprland.nix
+    ./modules/virtualization.nix
   ];
 
   # nixpkgs configuration
@@ -45,6 +46,9 @@
     # Deduplicate and optimize nix store
     auto-optimise-store = true;
   };
+
+  # Ensure VFIO options are properly enabled
+  options.vfio.enable = lib.mkEnableOption "Configure the machine for VFIO";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
