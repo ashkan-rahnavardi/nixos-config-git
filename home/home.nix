@@ -22,6 +22,7 @@
 
   home.packages = with pkgs; [
     obsidian
+    prusa-slicer
     firefox
     ferdium
     cava
