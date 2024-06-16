@@ -10,7 +10,8 @@
     ./gpg.nix
     ./gtk.nix
     ./lazygit.nix
-    ./neovim.nix
+    ./nixvim.nix
+    # ./neovim.nix
     ./scripts.nix
     ./spicetify.nix
     ./tmux.nix

@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   # imports = [
   #   # ./modules/hyprland.nix
   #   ./modules/alacritty.nix
@@ -20,6 +24,11 @@
   #   ./modules/kitty.nix
   # ];
 
+  imports = [
+    ./modules/default.nix
+    ./modules/hyprland/hyprland.nix
+  ];
+
   home.packages = with pkgs; [
     obsidian
     prusa-slicer
@@ -28,6 +37,10 @@
     cava
     chromium
     vscode
+  ];
+
+  home.packages = [
+    inputs.nixvim.packages.${pkgs.system}.default
   ];
 
   # home.file.".local/bin/ueberzug".source = "${ueberzugpp}/bin/ueberzugpp";
@@ -47,9 +60,4 @@
   programs.home-manager.enable = true;
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
-
-  imports = [
-    ./modules/default.nix
-    ./modules/hyprland/hyprland.nix
-  ];
 }
