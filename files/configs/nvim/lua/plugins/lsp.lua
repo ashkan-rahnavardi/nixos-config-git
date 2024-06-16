@@ -30,18 +30,23 @@ return {
         lua_ls = {
           settings = {
             Lua = {
+              runtime = { version = "LuaJIT" },
+              diagnostics = {
+                globals = {
+                  "vim",
+                  "use",
+                  "describe",
+                  "it",
+                  "before_each",
+                  "after_each",
+                  "pending",
+                },
+              },
               workspace = {
                 checkThirdParty = false,
               },
               completion = {
                 callSnippet = "Replace",
-              },
-              diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {
-                  "vim",
-                  "require",
-                },
               },
             },
           },
