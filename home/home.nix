@@ -27,6 +27,7 @@
     ferdium
     cava
     chromium
+    vscode
   ];
 
   # home.file.".local/bin/ueberzug".source = "${ueberzugpp}/bin/ueberzugpp";

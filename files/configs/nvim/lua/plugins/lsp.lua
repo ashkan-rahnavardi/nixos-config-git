@@ -4,7 +4,7 @@ return {
     opts = {
       servers = {
         ansiblels = {},
-
+        tsserver = {},
         dockerls = {},
         bashls = {},
         gopls = {
