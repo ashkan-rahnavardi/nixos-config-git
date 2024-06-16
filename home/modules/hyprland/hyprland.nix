@@ -1,20 +1,18 @@
 {...}: let
-  hyprland_config = ./../../files/configs/hypr;
+  hyprland_config = ./../../../files/configs/hypr;
 in {
-  imports = ./extras;
-
-  # imports = [
-  #   ./clipboard.nix
-  #   ./dconf-hyprland.nix
-  #   ./swappy.nix
-  #   ./swaync.nix
-  #   ./waybar.nix
-  #   ./wofi.nix
-  #   ./xdg.nix
-  #   ./hyprpaper.nix
-  #   ./hyprlock.nix
-  #   ./hypridle.nix
-  # ];
+  imports = [
+    ./extras/clipboard.nix
+    ./extras/dconf-hyprland.nix
+    ./extras/swappy.nix
+    ./extras/swaync.nix
+    ./extras/waybar.nix
+    ./extras/wofi.nix
+    ./extras/xdg.nix
+    ./extras/hyprpaper.nix
+    ./extras/hyprlock.nix
+    ./extras/hypridle.nix
+  ];
 
   xdg.configFile = {
     "hypr" = {

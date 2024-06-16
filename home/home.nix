@@ -47,5 +47,8 @@
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
-  myHome = import ./modules;
+  imports = [
+    ./modules/default.nix
+    ./modules/hyprland/hyprland.nix
+  ];
 }
