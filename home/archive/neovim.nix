@@ -25,6 +25,13 @@ in {
       markdownlint-cli
       marksman
       nil
+
+      # JavaScript
+      nodePackages.prettier
+      nodePackages.eslint
+      nodePackages.typescript-language-server
+      nodePackages.volar
+
       nodePackages.bash-language-server
       nodePackages.prettier
       nodePackages.pyright
