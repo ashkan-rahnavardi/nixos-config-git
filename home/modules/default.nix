@@ -10,7 +10,7 @@
     ./modules/gpg.nix
     ./modules/gtk.nix
     ./modules/lazygit.nix
-    # ./modules/neovim.nix
+    ./modules/neovim.nix
     ./modules/scripts.nix
     ./modules/spicetify.nix
     ./modules/tmux.nix
