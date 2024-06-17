@@ -368,11 +368,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1718580371,
-        "narHash": "sha256-dmkd+wOEBLv8zDPjki6SkV01JYg7lu34fKQq/OIzwQY=",
+        "lastModified": 1718612583,
+        "narHash": "sha256-tjY+Bo01sSB8ztKhh9cZQWUWyE/lCkCRzlrBUb8jFxE=",
         "owner": "ashkan-rahnavardi",
         "repo": "AshVim",
-        "rev": "125d3d35947f69f345c6788fa4939fd1e0f6da7c",
+        "rev": "04974cc890e1d9c09bc9c2bc755676f2e89717cc",
         "type": "github"
       },
       "original": {
