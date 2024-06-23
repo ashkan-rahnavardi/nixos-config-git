@@ -368,11 +368,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1718612583,
-        "narHash": "sha256-tjY+Bo01sSB8ztKhh9cZQWUWyE/lCkCRzlrBUb8jFxE=",
+        "lastModified": 1718655438,
+        "narHash": "sha256-oC9mv9HsMRf8v1GbquEXplDh2T/KBgWECtvC7Ft9jT8=",
         "owner": "ashkan-rahnavardi",
         "repo": "AshVim",
-        "rev": "04974cc890e1d9c09bc9c2bc755676f2e89717cc",
+        "rev": "e83f936ca6864d3e80f1373873b4f79576c47389",
         "type": "github"
       },
       "original": {
@@ -450,11 +450,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1718563470,
-        "narHash": "sha256-4giPbKlko7BM9XOOanQgGlKJLsTWiyv5arvsAMDDbmM=",
+        "lastModified": 1718649819,
+        "narHash": "sha256-q3rDlmIVTfCMMWPVCunLq9LtUJdR+PE0HT6fnHy3kA4=",
         "owner": "MichaelPachec0",
         "repo": "spicetify-nix",
-        "rev": "59db8ee2aff3318e4ba684f94e534478e8908fb2",
+        "rev": "2f0a0e0da77516c4de385c9e0ef8b6ebfdc88ef8",
         "type": "github"
       },
       "original": {

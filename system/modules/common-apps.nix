@@ -22,6 +22,8 @@
         pip
         virtualenv
         pygments
+        flake8
+        pandas
       ]))
     pipenv # Python Virtual Environment
     pulseaudio # Sound Server
@@ -38,6 +40,13 @@
     btop # Better CLI Resource viewer
     htop # CLI Resource viewer
     ntfs3g # enables read & write for ntfs files
+
+    # Linters
+    statix
+    selene
+    eslint_d
+    nodePackages.jsonlint
+    checkstyle
   ];
 
   # Docker configuration
