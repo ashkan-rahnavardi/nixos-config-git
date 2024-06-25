@@ -19,6 +19,5 @@
     ./ranger.nix
     ./nnn.nix
     ./kitty.nix
-    ./kdeconnect.nix
   ];
 }

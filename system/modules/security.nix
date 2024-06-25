@@ -24,22 +24,6 @@
     };
   };
 
-  networking.firewall = {
-    enable = true;
-    allowedTCPPortRanges = [
-      {
-        from = 1714;
-        to = 1764;
-      } # KDE CONNECT
-    ];
-    allowedUDPPortRanges = [
-      {
-        from = 1714;
-        to = 1764;
-      } # KDE CONNECT
-    ];
-  };
-
   # List services that you want to enable:
   services.locate.enable = true;
   services.locate.localuser = null;
