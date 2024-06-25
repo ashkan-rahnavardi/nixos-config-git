@@ -37,6 +37,7 @@
     cava
     chromium
     vscode
+    kdeconnect
   ];
 
   # home.file.".local/bin/ueberzug".source = "${ueberzugpp}/bin/ueberzugpp";

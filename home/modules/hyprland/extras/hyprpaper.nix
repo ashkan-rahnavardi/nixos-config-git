@@ -1,7 +1,10 @@
 {...}: let
-  wallpaper = builtins.toPath "/home/ash/Pictures/walls/rice/neon_car.png";
-  wallpaper2 = builtins.toPath "/home/ash/Pictures/walls/rice/purp_jap.png";
-  wallpaper3 = builtins.toPath "/home/ash/Pictures/walls/rice/rice_vert.png";
+  rice1 = builtins.toPath "/home/ash/Pictures/walls/rice/neon_car.png";
+  rice2 = builtins.toPath "/home/ash/Pictures/walls/rice/purp_jap.png";
+  rice3 = builtins.toPath "/home/ash/Pictures/walls/rice/rice_vert.png";
+  leaf1 = builtins.toPath "/home/ash/Pictures/walls/dark/leaf.png";
+  leaf2 = builtins.toPath "/home/ash/Pictures/walls/dark/leaf2.png";
+  leaf3 = builtins.toPath "/home/ash/Pictures/walls/dark/leaf_vert.png";
 in {
   services.hyprpaper = {
     enable = true;
@@ -10,15 +13,18 @@ in {
       splash = false;
 
       preload = [
-        "${wallpaper}"
-        "${wallpaper2}"
-        "${wallpaper3}"
+        "${rice1}"
+        "${rice2}"
+        "${rice3}"
+        "${leaf1}"
+        "${leaf2}"
+        "${leaf3}"
       ];
 
       wallpaper = [
-        "DP-4,${wallpaper}"
-        "DP-3,${wallpaper2}"
-        "DP-1,${wallpaper3}"
+        "DP-4,${rice1}"
+        "DP-3,${rice2}"
+        "DP-1,${rice3}"
       ];
 
       #     preload = [
